@@ -1,0 +1,93 @@
+<svg width="1000" height="700" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="1000" height="60" fill="#00BCD4"/>
+  <text x="500" y="38" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="white" text-anchor="middle">2023: Modern Efficient Transformers</text>
+  
+  <!-- Subtitle -->
+  <text x="500" y="85" font-family="Arial, sans-serif" font-size="14" fill="#666" text-anchor="middle">LLaMA, Mistral, GPT-4 | Efficiency Innovations | Open Source Revolution</text>
+  
+  <!-- LLaMA Block -->
+  <rect x="30" y="110" width="300" height="480" rx="15" fill="#E0F7FA" stroke="#00BCD4" stroke-width="3"/>
+  <text x="180" y="145" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#00838F" text-anchor="middle">LLaMA Block</text>
+  <text x="180" y="168" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">7B-70B params | Meta</text>
+  
+  <!-- LLaMA Components -->
+  <rect x="60" y="510" width="220" height="30" rx="6" fill="#B2EBF2"/>
+  <text x="170" y="530" font-family="Arial, sans-serif" font-size="10" fill="#00838F" text-anchor="middle">Input</text>
+  
+  <rect x="60" y="460" width="220" height="30" rx="6" fill="#FFE082"/>
+  <text x="170" y="480" font-family="Arial, sans-serif" font-size="10" fill="#F57F17" text-anchor="middle">RMSNorm (simpler than LayerNorm)</text>
+  
+  <rect x="60" y="380" width="220" height="55" rx="10" fill="#00BCD4"/>
+  <text x="170" y="400" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Grouped Query Attention</text>
+  <text x="170" y="420" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">+ RoPE Positions</text>
+  
+  <rect x="60" y="330" width="220" height="30" rx="6" fill="#FFE082"/>
+  <text x="170" y="350" font-family="Arial, sans-serif" font-size="10" fill="#F57F17" text-anchor="middle">Add + RMSNorm</text>
+  
+  <rect x="60" y="260" width="220" height="50" rx="10" fill="#9C27B0"/>
+  <text x="170" y="280" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">SwiGLU FFN</text>
+  <text x="170" y="300" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">(replaces GELU+linear)</text>
+  
+  <rect x="60" y="200" width="220" height="30" rx="6" fill="#FFE082"/>
+  <text x="170" y="220" font-family="Arial, sans-serif" font-size="10" fill="#F57F17" text-anchor="middle">Add</text>
+  
+  <!-- Mistral Block -->
+  <rect x="350" y="110" width="300" height="480" rx="15" fill="#E3F2FD" stroke="#2196F3" stroke-width="3"/>
+  <text x="500" y="145" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1565C0" text-anchor="middle">Mistral Block</text>
+  <text x="500" y="168" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">7B params | Mistral AI</text>
+  
+  <!-- Mistral Components -->
+  <rect x="380" y="510" width="220" height="30" rx="6" fill="#BBDEFB"/>
+  <text x="490" y="530" font-family="Arial, sans-serif" font-size="10" fill="#1565C0" text-anchor="middle">Input</text>
+  
+  <rect x="380" y="460" width="220" height="30" rx="6" fill="#FFE082"/>
+  <text x="490" y="480" font-family="Arial, sans-serif" font-size="10" fill="#F57F17" text-anchor="middle">RMSNorm</text>
+  
+  <rect x="380" y="380" width="220" height="55" rx="10" fill="#2196F3"/>
+  <text x="490" y="400" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Sliding Window Attention</text>
+  <text x="490" y="420" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">+ GQA + RoPE</text>
+  
+  <rect x="380" y="330" width="220" height="30" rx="6" fill="#FFE082"/>
+  <text x="490" y="350" font-family="Arial, sans-serif" font-size="10" fill="#F57F17" text-anchor="middle">Add + RMSNorm</text>
+  
+  <rect x="380" y="260" width="220" height="50" rx="10" fill="#9C27B0"/>
+  <text x="490" y="280" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">SwiGLU FFN</text>
+  <text x="490" y="300" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">d_ff = 2/3 * 4d</text>
+  
+  <rect x="380" y="200" width="220" height="30" rx="6" fill="#FFE082"/>
+  <text x="490" y="220" font-family="Arial, sans-serif" font-size="10" fill="#F57F17" text-anchor="middle">Add</text>
+  
+  <!-- Key Innovations -->
+  <rect x="680" y="110" width="290" height="340" rx="10" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <text x="825" y="145" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#E65100" text-anchor="middle">2023 Innovations</text>
+  
+  <rect x="700" y="165" width="250" height="55" rx="6" fill="#E8F5E9"/>
+  <text x="825" y="185" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2E7D32" text-anchor="middle">RoPE (Rotary Position)</text>
+  <text x="825" y="205" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">Relative positions in attention</text>
+  
+  <rect x="700" y="230" width="250" height="55" rx="6" fill="#E3F2FD"/>
+  <text x="825" y="250" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1565C0" text-anchor="middle">Grouped Query Attention</text>
+  <text x="825" y="270" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">Share K,V across query groups</text>
+  
+  <rect x="700" y="295" width="250" height="55" rx="6" fill="#FCE4EC"/>
+  <text x="825" y="315" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#C2185B" text-anchor="middle">Flash Attention</text>
+  <text x="825" y="335" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">O(N) memory, faster training</text>
+  
+  <rect x="700" y="360" width="250" height="55" rx="6" fill="#F3E5F5"/>
+  <text x="825" y="380" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#7B1FA2" text-anchor="middle">SwiGLU Activation</text>
+  <text x="825" y="400" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">Better than GELU/ReLU</text>
+  
+  <!-- Context Length -->
+  <rect x="680" y="460" width="290" height="130" rx="10" fill="#ECEFF1" stroke="#607D8B" stroke-width="2"/>
+  <text x="825" y="490" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#455A64" text-anchor="middle">Context Length</text>
+  <text x="700" y="520" font-family="Arial, sans-serif" font-size="11" fill="#333">GPT-4: 32K/128K tokens</text>
+  <text x="700" y="545" font-family="Arial, sans-serif" font-size="11" fill="#333">Claude: 100K+ tokens</text>
+  <text x="700" y="570" font-family="Arial, sans-serif" font-size="11" fill="#333">vs 2017: 512 tokens!</text>
+  
+  <!-- Bottom comparison -->
+  <rect x="30" y="610" width="620" height="75" rx="10" fill="#FFF8E1" stroke="#FFC107" stroke-width="2"/>
+  <text x="340" y="635" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#F57F17" text-anchor="middle">2023 vs 2017: Key Differences</text>
+  <text x="340" y="660" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">RMSNorm (faster) | RoPE (relative pos) | GQA (efficient) | SwiGLU (better) | Flash Attention (memory)</text>
+  <text x="340" y="678" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Pre-Norm standard | No encoder needed | Longer contexts | Quantization support</text>
+</svg>

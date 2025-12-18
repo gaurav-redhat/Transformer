@@ -1,0 +1,71 @@
+<svg width="950" height="600" viewBox="0 0 950 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="950" height="50" fill="#9C27B0"/>
+  <text x="475" y="33" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">Low-Rank Attention (Linformer)</text>
+  
+  <!-- Key Insight -->
+  <rect x="30" y="70" width="890" height="90" rx="10" fill="#F3E5F5" stroke="#9C27B0" stroke-width="3"/>
+  <text x="475" y="100" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#7B1FA2" text-anchor="middle">Key Insight: Attention matrix is low-rank!</text>
+  <text x="475" y="130" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">The n×n attention matrix can be well-approximated by a k×k matrix where k &lt;&lt; n</text>
+  
+  <!-- Standard vs Low-Rank -->
+  <rect x="30" y="180" width="420" height="200" rx="10" fill="#FFEBEE" stroke="#F44336" stroke-width="2"/>
+  <text x="240" y="210" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#C62828" text-anchor="middle">Standard Attention</text>
+  
+  <!-- Matrix dimensions visualization -->
+  <rect x="60" y="240" width="80" height="120" fill="#EF5350" rx="3"/>
+  <text x="100" y="305" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Q</text>
+  <text x="100" y="320" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">n×d</text>
+  
+  <text x="155" y="305" font-family="Arial, sans-serif" font-size="16" fill="#333">×</text>
+  
+  <rect x="175" y="250" width="100" height="100" fill="#EF5350" rx="3"/>
+  <text x="225" y="305" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">K^T</text>
+  <text x="225" y="320" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">d×n</text>
+  
+  <text x="290" y="305" font-family="Arial, sans-serif" font-size="16" fill="#333">=</text>
+  
+  <rect x="310" y="240" width="120" height="120" fill="#C62828" rx="3"/>
+  <text x="370" y="305" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Attention</text>
+  <text x="370" y="320" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">n×n</text>
+  
+  <text x="240" y="370" font-family="Arial, sans-serif" font-size="11" fill="#C62828" text-anchor="middle">O(n²d) time, O(n²) memory</text>
+  
+  <!-- Low-Rank (Linformer) -->
+  <rect x="500" y="180" width="420" height="200" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="710" y="210" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2E7D32" text-anchor="middle">Linformer (Low-Rank)</text>
+  
+  <!-- Projected dimensions -->
+  <rect x="530" y="250" width="80" height="120" fill="#81C784" rx="3"/>
+  <text x="570" y="305" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Q</text>
+  <text x="570" y="320" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">n×d</text>
+  
+  <text x="625" y="305" font-family="Arial, sans-serif" font-size="16" fill="#333">×</text>
+  
+  <rect x="650" y="280" width="40" height="50" fill="#4CAF50" rx="3"/>
+  <text x="670" y="310" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">E·K^T</text>
+  <text x="670" y="325" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">d×k</text>
+  
+  <text x="705" y="305" font-family="Arial, sans-serif" font-size="16" fill="#333">=</text>
+  
+  <rect x="725" y="260" width="80" height="90" fill="#2E7D32" rx="3"/>
+  <text x="765" y="305" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Low-rank</text>
+  <text x="765" y="320" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">n×k</text>
+  
+  <text x="840" y="305" font-family="Arial, sans-serif" font-size="11" fill="#2E7D32">k &lt;&lt; n</text>
+  
+  <text x="710" y="370" font-family="Arial, sans-serif" font-size="11" fill="#2E7D32" text-anchor="middle">O(nkd) time, O(nk) memory</text>
+  
+  <!-- Math formulas -->
+  <rect x="30" y="400" width="890" height="180" rx="10" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="475" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">Linformer Math</text>
+  
+  <text x="50" y="470" font-family="Arial, sans-serif" font-size="12" fill="#333">Standard:</text>
+  <text x="200" y="470" font-family="Courier New, monospace" font-size="12" fill="#333">Attention(Q,K,V) = softmax(QK^T/√d) V</text>
+  
+  <text x="50" y="510" font-family="Arial, sans-serif" font-size="12" fill="#333">Linformer:</text>
+  <text x="200" y="510" font-family="Courier New, monospace" font-size="12" fill="#7B1FA2">Attention(Q,K,V) = softmax(Q(E_K K)^T/√d) (E_V V)</text>
+  
+  <text x="50" y="550" font-family="Arial, sans-serif" font-size="11" fill="#666">where E_K, E_V ∈ R^(k×n) are learned projection matrices</text>
+  <text x="50" y="575" font-family="Arial, sans-serif" font-size="11" fill="#666">k = 256 works well for n = 4096 (16x compression!)</text>
+</svg>

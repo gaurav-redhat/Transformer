@@ -1,0 +1,78 @@
+<svg width="950" height="650" viewBox="0 0 950 650" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="950" height="50" fill="#E91E63"/>
+  <text x="475" y="33" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">LSH / Hash Attention (Reformer)</text>
+  
+  <!-- Key Insight -->
+  <rect x="30" y="70" width="890" height="90" rx="10" fill="#FCE4EC" stroke="#E91E63" stroke-width="3"/>
+  <text x="475" y="100" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#C2185B" text-anchor="middle">Key Insight: Only attend to similar queries!</text>
+  <text x="475" y="130" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">Softmax is dominated by largest dot products. Use LSH to find them efficiently.</text>
+  
+  <!-- LSH Explanation -->
+  <rect x="30" y="180" width="440" height="220" rx="10" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="250" y="210" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Locality Sensitive Hashing (LSH)</text>
+  
+  <text x="50" y="245" font-family="Arial, sans-serif" font-size="11" fill="#333">1. Hash queries and keys using random projections:</text>
+  <text x="70" y="270" font-family="Courier New, monospace" font-size="10" fill="#333">h(x) = argmax([xR; -xR]) where R ~ N(0,1)</text>
+  
+  <text x="50" y="305" font-family="Arial, sans-serif" font-size="11" fill="#333">2. Similar vectors → Same hash bucket (high prob)</text>
+  
+  <text x="50" y="340" font-family="Arial, sans-serif" font-size="11" fill="#333">3. Only compute attention within same bucket</text>
+  
+  <text x="50" y="375" font-family="Arial, sans-serif" font-size="11" fill="#C2185B">Complexity: O(n log n) expected</text>
+  
+  <!-- Visualization -->
+  <rect x="500" y="180" width="420" height="220" rx="10" fill="#FCE4EC" stroke="#E91E63" stroke-width="2"/>
+  <text x="710" y="210" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#C2185B" text-anchor="middle">LSH Buckets Visualization</text>
+  
+  <!-- Bucket 1 -->
+  <rect x="530" y="240" width="100" height="80" rx="5" fill="#F8BBD9"/>
+  <text x="580" y="260" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#C2185B" text-anchor="middle">Bucket 1</text>
+  <circle cx="550" cy="290" r="12" fill="#E91E63"/>
+  <text x="550" y="294" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">q1</text>
+  <circle cx="580" cy="285" r="12" fill="#E91E63"/>
+  <text x="580" y="289" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">k3</text>
+  <circle cx="605" cy="295" r="12" fill="#E91E63"/>
+  <text x="605" y="299" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">q5</text>
+  
+  <!-- Bucket 2 -->
+  <rect x="650" y="240" width="100" height="80" rx="5" fill="#CE93D8"/>
+  <text x="700" y="260" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#7B1FA2" text-anchor="middle">Bucket 2</text>
+  <circle cx="670" cy="290" r="12" fill="#9C27B0"/>
+  <text x="670" y="294" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">q2</text>
+  <circle cx="700" cy="288" r="12" fill="#9C27B0"/>
+  <text x="700" y="292" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">k1</text>
+  <circle cx="730" cy="293" r="12" fill="#9C27B0"/>
+  <text x="730" y="297" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">k4</text>
+  
+  <!-- Bucket 3 -->
+  <rect x="770" y="240" width="100" height="80" rx="5" fill="#B2DFDB"/>
+  <text x="820" y="260" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#00796B" text-anchor="middle">Bucket 3</text>
+  <circle cx="790" cy="290" r="12" fill="#009688"/>
+  <text x="790" y="294" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">q3</text>
+  <circle cx="850" cy="290" r="12" fill="#009688"/>
+  <text x="850" y="294" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">k2</text>
+  
+  <text x="710" y="355" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Attention only computed within buckets!</text>
+  <text x="710" y="380" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">n tokens / b buckets ≈ n/b tokens per bucket</text>
+  
+  <!-- Math Section -->
+  <rect x="30" y="420" width="890" height="210" rx="10" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="475" y="450" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">Reformer Math</text>
+  
+  <!-- LSH Math -->
+  <rect x="50" y="475" width="400" height="130" rx="8" fill="#FCE4EC" stroke="#E91E63" stroke-width="2"/>
+  <text x="250" y="500" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#C2185B" text-anchor="middle">LSH Hash Function</text>
+  
+  <text x="70" y="530" font-family="Courier New, monospace" font-size="11" fill="#333">h(x) = argmax([xR; -xR])</text>
+  <text x="70" y="555" font-family="Arial, sans-serif" font-size="10" fill="#666">R ∈ R^(d × b/2), random orthogonal</text>
+  <text x="70" y="580" font-family="Arial, sans-serif" font-size="10" fill="#666">b = number of hash buckets</text>
+  
+  <!-- Attention Math -->
+  <rect x="490" y="475" width="410" height="130" rx="8" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="695" y="500" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32" text-anchor="middle">LSH Attention</text>
+  
+  <text x="510" y="530" font-family="Courier New, monospace" font-size="11" fill="#333">A_i = Σ_{j: h(q_i)=h(k_j)} softmax(q_i·k_j/√d) v_j</text>
+  <text x="510" y="560" font-family="Arial, sans-serif" font-size="10" fill="#666">Only sum over tokens in same bucket</text>
+  <text x="510" y="585" font-family="Arial, sans-serif" font-size="10" fill="#2E7D32">Time: O(n log n × d) | Memory: O(n log n)</text>
+</svg>

@@ -1,0 +1,98 @@
+<svg width="950" height="700" viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="950" height="50" fill="#673AB7"/>
+  <text x="475" y="33" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">Attention Mechanism: Step-by-Step Math</text>
+  
+  <!-- Step 1: Input -->
+  <rect x="30" y="70" width="280" height="150" rx="10" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+  <text x="170" y="95" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565C0" text-anchor="middle">Step 1: Input Embedding</text>
+  
+  <text x="50" y="125" font-family="Arial, sans-serif" font-size="11" fill="#333">X = Input matrix (n x d)</text>
+  <text x="50" y="145" font-family="Arial, sans-serif" font-size="11" fill="#333">n = sequence length</text>
+  <text x="50" y="165" font-family="Arial, sans-serif" font-size="11" fill="#333">d = embedding dimension (512)</text>
+  
+  <rect x="50" y="180" width="80" height="30" fill="#BBDEFB" stroke="#2196F3"/>
+  <text x="90" y="200" font-family="Arial, sans-serif" font-size="10" fill="#1565C0" text-anchor="middle">X: n x d</text>
+  
+  <!-- Arrow -->
+  <line x1="315" y1="145" x2="345" y2="145" stroke="#666" stroke-width="2"/>
+  <polygon points="340,140 350,145 340,150" fill="#666"/>
+  
+  <!-- Step 2: QKV Projection -->
+  <rect x="350" y="70" width="280" height="150" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="490" y="95" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2E7D32" text-anchor="middle">Step 2: Create Q, K, V</text>
+  
+  <text x="370" y="125" font-family="Courier New, monospace" font-size="11" fill="#333">Q = X * W_q  (n x d_k)</text>
+  <text x="370" y="145" font-family="Courier New, monospace" font-size="11" fill="#333">K = X * W_k  (n x d_k)</text>
+  <text x="370" y="165" font-family="Courier New, monospace" font-size="11" fill="#333">V = X * W_v  (n x d_v)</text>
+  
+  <rect x="370" y="180" width="50" height="25" fill="#FFCDD2" stroke="#E91E63"/>
+  <text x="395" y="197" font-family="Arial, sans-serif" font-size="9" fill="#C2185B" text-anchor="middle">Q</text>
+  <rect x="430" y="180" width="50" height="25" fill="#BBDEFB" stroke="#2196F3"/>
+  <text x="455" y="197" font-family="Arial, sans-serif" font-size="9" fill="#1565C0" text-anchor="middle">K</text>
+  <rect x="490" y="180" width="50" height="25" fill="#C8E6C9" stroke="#4CAF50"/>
+  <text x="515" y="197" font-family="Arial, sans-serif" font-size="9" fill="#2E7D32" text-anchor="middle">V</text>
+  
+  <!-- Arrow -->
+  <line x1="635" y1="145" x2="665" y2="145" stroke="#666" stroke-width="2"/>
+  <polygon points="660,140 670,145 660,150" fill="#666"/>
+  
+  <!-- Step 3: Attention Scores -->
+  <rect x="670" y="70" width="260" height="150" rx="10" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <text x="800" y="95" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#E65100" text-anchor="middle">Step 3: Compute Scores</text>
+  
+  <text x="690" y="125" font-family="Courier New, monospace" font-size="11" fill="#333">scores = Q * K^T</text>
+  <text x="690" y="145" font-family="Arial, sans-serif" font-size="10" fill="#666">Shape: (n x d_k) * (d_k x n)</text>
+  <text x="690" y="165" font-family="Arial, sans-serif" font-size="10" fill="#666">Result: (n x n) attention matrix</text>
+  
+  <rect x="720" y="175" width="60" height="30" fill="#FFE0B2" stroke="#FF9800"/>
+  <text x="750" y="195" font-family="Arial, sans-serif" font-size="9" fill="#E65100" text-anchor="middle">n x n</text>
+  
+  <!-- Step 4: Scale -->
+  <rect x="30" y="240" width="280" height="130" rx="10" fill="#FCE4EC" stroke="#E91E63" stroke-width="2"/>
+  <text x="170" y="265" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#C2185B" text-anchor="middle">Step 4: Scale</text>
+  
+  <text x="50" y="295" font-family="Courier New, monospace" font-size="11" fill="#333">scaled = scores / sqrt(d_k)</text>
+  <text x="50" y="320" font-family="Arial, sans-serif" font-size="10" fill="#666">Why? Prevents large dot products</text>
+  <text x="50" y="340" font-family="Arial, sans-serif" font-size="10" fill="#666">sqrt(64) = 8 for d_k = 64</text>
+  
+  <!-- Arrow -->
+  <line x1="315" y1="305" x2="345" y2="305" stroke="#666" stroke-width="2"/>
+  <polygon points="340,300 350,305 340,310" fill="#666"/>
+  
+  <!-- Step 5: Mask (optional) -->
+  <rect x="350" y="240" width="280" height="130" rx="10" fill="#F3E5F5" stroke="#9C27B0" stroke-width="2"/>
+  <text x="490" y="265" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7B1FA2" text-anchor="middle">Step 5: Mask (Decoder)</text>
+  
+  <text x="370" y="295" font-family="Courier New, monospace" font-size="11" fill="#333">masked = scaled + mask</text>
+  <text x="370" y="320" font-family="Arial, sans-serif" font-size="10" fill="#666">mask = 0 (attend) or -inf (ignore)</text>
+  <text x="370" y="340" font-family="Arial, sans-serif" font-size="10" fill="#666">Causal: only attend to past</text>
+  
+  <!-- Arrow -->
+  <line x1="635" y1="305" x2="665" y2="305" stroke="#666" stroke-width="2"/>
+  <polygon points="660,300 670,305 660,310" fill="#666"/>
+  
+  <!-- Step 6: Softmax -->
+  <rect x="670" y="240" width="260" height="130" rx="10" fill="#E0F7FA" stroke="#00BCD4" stroke-width="2"/>
+  <text x="800" y="265" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#00838F" text-anchor="middle">Step 6: Softmax</text>
+  
+  <text x="690" y="295" font-family="Courier New, monospace" font-size="11" fill="#333">attn = softmax(scaled)</text>
+  <text x="690" y="320" font-family="Arial, sans-serif" font-size="10" fill="#666">Each row sums to 1</text>
+  <text x="690" y="340" font-family="Arial, sans-serif" font-size="10" fill="#666">Probabilities: how much to attend</text>
+  
+  <!-- Step 7: Output -->
+  <rect x="200" y="400" width="550" height="140" rx="10" fill="#FFFDE7" stroke="#FFC107" stroke-width="3"/>
+  <text x="475" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#F57F17" text-anchor="middle">Step 7: Weighted Sum</text>
+  
+  <text x="230" y="465" font-family="Courier New, monospace" font-size="13" fill="#333">output = attention_weights * V</text>
+  <text x="230" y="495" font-family="Arial, sans-serif" font-size="11" fill="#666">Shape: (n x n) * (n x d_v) = (n x d_v)</text>
+  <text x="230" y="520" font-family="Arial, sans-serif" font-size="11" fill="#666">Each output is a weighted combination of all Values</text>
+  
+  <!-- Final Formula -->
+  <rect x="100" y="560" width="750" height="120" rx="10" fill="#ECEFF1" stroke="#607D8B" stroke-width="2"/>
+  <text x="475" y="590" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#455A64" text-anchor="middle">Complete Formula</text>
+  
+  <text x="475" y="625" font-family="Courier New, monospace" font-size="14" fill="#333" text-anchor="middle">Attention(Q, K, V) = softmax(Q * K^T / sqrt(d_k)) * V</text>
+  
+  <text x="475" y="660" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">Complexity: O(n^2 * d) time | O(n^2 + n*d) space</text>
+</svg>

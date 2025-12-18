@@ -1,0 +1,61 @@
+<svg width="950" height="700" viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="950" height="50" fill="#795548"/>
+  <text x="475" y="33" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">State Space Models (SSM) &amp; Mamba</text>
+  
+  <!-- Key Insight -->
+  <rect x="30" y="70" width="890" height="80" rx="10" fill="#EFEBE9" stroke="#795548" stroke-width="3"/>
+  <text x="475" y="100" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#5D4037" text-anchor="middle">Key Insight: Replace attention with selective state space</text>
+  <text x="475" y="125" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">O(n) complexity with data-dependent state transitions (no attention matrix!)</text>
+  
+  <!-- SSM Equations -->
+  <rect x="30" y="170" width="420" height="200" rx="10" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="240" y="200" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">State Space Model (Continuous)</text>
+  
+  <text x="50" y="240" font-family="Courier New, monospace" font-size="12" fill="#333">h'(t) = A h(t) + B x(t)</text>
+  <text x="50" y="270" font-family="Courier New, monospace" font-size="12" fill="#333">y(t) = C h(t) + D x(t)</text>
+  
+  <text x="50" y="310" font-family="Arial, sans-serif" font-size="11" fill="#666">A = state transition (N×N)</text>
+  <text x="50" y="335" font-family="Arial, sans-serif" font-size="11" fill="#666">B = input projection (N×1)</text>
+  <text x="50" y="360" font-family="Arial, sans-serif" font-size="11" fill="#666">C = output projection (1×N)</text>
+  
+  <!-- Discrete SSM -->
+  <rect x="500" y="170" width="420" height="200" rx="10" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+  <text x="710" y="200" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565C0" text-anchor="middle">Discretized (for sequences)</text>
+  
+  <text x="520" y="240" font-family="Courier New, monospace" font-size="12" fill="#333">h_t = A̅ h_{t-1} + B̅ x_t</text>
+  <text x="520" y="270" font-family="Courier New, monospace" font-size="12" fill="#333">y_t = C h_t</text>
+  
+  <text x="520" y="310" font-family="Arial, sans-serif" font-size="11" fill="#666">A̅ = exp(ΔA) (discretization)</text>
+  <text x="520" y="335" font-family="Arial, sans-serif" font-size="11" fill="#666">B̅ = (ΔA)^{-1}(exp(ΔA) - I)·ΔB</text>
+  <text x="520" y="360" font-family="Arial, sans-serif" font-size="11" fill="#1565C0">Δ = step size (input-dependent!)</text>
+  
+  <!-- Mamba (S6) -->
+  <rect x="30" y="390" width="890" height="290" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="3"/>
+  <text x="475" y="420" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2E7D32" text-anchor="middle">Mamba: Selective State Space Model (S6)</text>
+  
+  <!-- Key innovation -->
+  <rect x="50" y="445" width="400" height="100" rx="8" fill="#C8E6C9"/>
+  <text x="250" y="475" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32" text-anchor="middle">Key Innovation: Selection Mechanism</text>
+  <text x="70" y="505" font-family="Courier New, monospace" font-size="10" fill="#333">Δ, B, C = f(x)  # Input-dependent!</text>
+  <text x="70" y="530" font-family="Arial, sans-serif" font-size="10" fill="#666">Parameters change based on input content</text>
+  
+  <!-- Complexity -->
+  <rect x="500" y="445" width="400" height="100" rx="8" fill="#A5D6A7"/>
+  <text x="700" y="475" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32" text-anchor="middle">Complexity</text>
+  <text x="520" y="505" font-family="Arial, sans-serif" font-size="11" fill="#333">Time: O(n) - linear in sequence length!</text>
+  <text x="520" y="530" font-family="Arial, sans-serif" font-size="11" fill="#333">Memory: O(1) state per step (vs O(n) KV cache)</text>
+  
+  <!-- Comparison -->
+  <rect x="50" y="560" width="830" height="100" rx="8" fill="white" stroke="#4CAF50" stroke-width="2"/>
+  <text x="465" y="590" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Mamba vs Attention</text>
+  
+  <text x="180" y="620" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Attention: O(n²) time, O(n) KV cache</text>
+  <text x="180" y="645" font-family="Arial, sans-serif" font-size="10" fill="#C62828" text-anchor="middle">Global but expensive</text>
+  
+  <text x="465" y="620" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Mamba: O(n) time, O(1) state</text>
+  <text x="465" y="645" font-family="Arial, sans-serif" font-size="10" fill="#4CAF50" text-anchor="middle">Fast but struggles with recall</text>
+  
+  <text x="750" y="620" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Hybrid: O(n) + periodic O(n²)</text>
+  <text x="750" y="645" font-family="Arial, sans-serif" font-size="10" fill="#2196F3" text-anchor="middle">Best of both worlds!</text>
+</svg>

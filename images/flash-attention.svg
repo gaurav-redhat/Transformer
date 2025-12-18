@@ -1,0 +1,78 @@
+<svg width="950" height="600" viewBox="0 0 950 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="950" height="50" fill="#FF5722"/>
+  <text x="475" y="33" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">Flash Attention: Memory-Efficient Attention</text>
+  
+  <!-- Problem side -->
+  <rect x="30" y="70" width="420" height="250" rx="10" fill="#FFEBEE" stroke="#F44336" stroke-width="2"/>
+  <text x="240" y="100" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#C62828" text-anchor="middle">Standard Attention Problem</text>
+  
+  <!-- Memory diagram standard -->
+  <rect x="60" y="130" width="350" height="80" rx="5" fill="#FFCDD2"/>
+  <text x="235" y="155" font-family="Arial, sans-serif" font-size="12" fill="#C62828" text-anchor="middle">Attention Matrix: O(n²) Memory</text>
+  <text x="235" y="180" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">n=32K → 32768 × 32768 × 4 bytes = 4 GB!</text>
+  <text x="235" y="200" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">Must store ENTIRE matrix in HBM</text>
+  
+  <!-- Memory hierarchy -->
+  <rect x="60" y="230" width="160" height="70" rx="5" fill="#EF9A9A"/>
+  <text x="140" y="255" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#C62828" text-anchor="middle">HBM (GPU RAM)</text>
+  <text x="140" y="275" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">40-80 GB</text>
+  <text x="140" y="290" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">~1.5 TB/s</text>
+  
+  <rect x="250" y="230" width="160" height="70" rx="5" fill="#FFCDD2"/>
+  <text x="330" y="255" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#C62828" text-anchor="middle">SRAM (Cache)</text>
+  <text x="330" y="275" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">~20 MB</text>
+  <text x="330" y="290" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">~19 TB/s</text>
+  
+  <!-- Solution side -->
+  <rect x="500" y="70" width="420" height="250" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="710" y="100" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2E7D32" text-anchor="middle">Flash Attention Solution</text>
+  
+  <!-- Tiled computation -->
+  <rect x="530" y="130" width="360" height="80" rx="5" fill="#C8E6C9"/>
+  <text x="710" y="155" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32" text-anchor="middle">Tiled Computation: O(n) Memory</text>
+  <text x="710" y="180" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">Process in blocks that fit in SRAM</text>
+  <text x="710" y="200" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">Never materialize full attention matrix!</text>
+  
+  <!-- Tile visualization -->
+  <rect x="550" y="230" width="40" height="40" fill="#4CAF50"/>
+  <rect x="595" y="230" width="40" height="40" fill="#81C784"/>
+  <rect x="640" y="230" width="40" height="40" fill="#A5D6A7"/>
+  <rect x="685" y="230" width="40" height="40" fill="#C8E6C9"/>
+  
+  <rect x="550" y="275" width="40" height="40" fill="#81C784"/>
+  <rect x="595" y="275" width="40" height="40" fill="#4CAF50"/>
+  <rect x="640" y="275" width="40" height="40" fill="#81C784"/>
+  <rect x="685" y="275" width="40" height="40" fill="#A5D6A7"/>
+  
+  <text x="760" y="260" font-family="Arial, sans-serif" font-size="10" fill="#333">Process</text>
+  <text x="760" y="275" font-family="Arial, sans-serif" font-size="10" fill="#333">one tile</text>
+  <text x="760" y="290" font-family="Arial, sans-serif" font-size="10" fill="#333">at a time</text>
+  
+  <!-- Arrow -->
+  <line x1="735" y1="265" x2="745" y2="265" stroke="#4CAF50" stroke-width="2"/>
+  <polygon points="742,260 752,265 742,270" fill="#4CAF50"/>
+  
+  <!-- Algorithm comparison -->
+  <rect x="30" y="340" width="890" height="240" rx="10" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="475" y="370" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">Flash Attention Algorithm</text>
+  
+  <!-- Standard flow -->
+  <rect x="60" y="400" width="380" height="160" rx="8" fill="#FFEBEE" stroke="#F44336" stroke-width="2"/>
+  <text x="250" y="425" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#C62828" text-anchor="middle">Standard Attention (Slow)</text>
+  
+  <text x="80" y="455" font-family="Courier New, monospace" font-size="10" fill="#333">1. S = QK^T        # O(n²) memory</text>
+  <text x="80" y="475" font-family="Courier New, monospace" font-size="10" fill="#333">2. P = softmax(S)  # Store n×n matrix</text>
+  <text x="80" y="495" font-family="Courier New, monospace" font-size="10" fill="#333">3. O = PV          # Another O(n²) read</text>
+  <text x="80" y="525" font-family="Arial, sans-serif" font-size="10" fill="#C62828">Memory: O(n²) | HBM reads: O(n² d)</text>
+  
+  <!-- Flash flow -->
+  <rect x="500" y="400" width="400" height="160" rx="8" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="700" y="425" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32" text-anchor="middle">Flash Attention (Fast)</text>
+  
+  <text x="520" y="455" font-family="Courier New, monospace" font-size="10" fill="#333">for each Q_block, K_block, V_block:</text>
+  <text x="520" y="475" font-family="Courier New, monospace" font-size="10" fill="#333">  S_ij = Q_i K_j^T   # Small tile</text>
+  <text x="520" y="495" font-family="Courier New, monospace" font-size="10" fill="#333">  P_ij = softmax(S_ij) # In SRAM</text>
+  <text x="520" y="515" font-family="Courier New, monospace" font-size="10" fill="#333">  O_i += P_ij V_j    # Accumulate</text>
+  <text x="520" y="545" font-family="Arial, sans-serif" font-size="10" fill="#2E7D32">Memory: O(n) | HBM reads: O(n² d / M)</text>
+</svg>

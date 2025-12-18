@@ -1,0 +1,67 @@
+<svg width="1200" height="400" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A237E"/>
+      <stop offset="50%" style="stop-color:#311B92"/>
+      <stop offset="100%" style="stop-color:#4A148C"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00BCD4"/>
+      <stop offset="50%" style="stop-color:#4CAF50"/>
+      <stop offset="100%" style="stop-color:#FFEB3B"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="400" fill="url(#bgGrad)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="150" fill="#311B92" opacity="0.3"/>
+  <circle cx="1100" cy="300" r="200" fill="#4A148C" opacity="0.3"/>
+  <circle cx="600" cy="200" r="100" fill="#7C4DFF" opacity="0.2"/>
+  
+  <!-- Neural network dots decoration -->
+  <circle cx="50" cy="50" r="4" fill="#64FFDA"/>
+  <circle cx="150" cy="80" r="4" fill="#64FFDA"/>
+  <circle cx="100" cy="150" r="4" fill="#64FFDA"/>
+  <line x1="50" y1="50" x2="150" y2="80" stroke="#64FFDA" stroke-width="1" opacity="0.5"/>
+  <line x1="150" y1="80" x2="100" y2="150" stroke="#64FFDA" stroke-width="1" opacity="0.5"/>
+  
+  <circle cx="1050" cy="50" r="4" fill="#FF4081"/>
+  <circle cx="1150" cy="100" r="4" fill="#FF4081"/>
+  <circle cx="1100" cy="150" r="4" fill="#FF4081"/>
+  <line x1="1050" y1="50" x2="1150" y2="100" stroke="#FF4081" stroke-width="1" opacity="0.5"/>
+  <line x1="1150" y1="100" x2="1100" y2="150" stroke="#FF4081" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Main Title -->
+  <text x="600" y="120" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="white" text-anchor="middle">The Complete Transformer Guide</text>
+  
+  <!-- Subtitle with gradient -->
+  <text x="600" y="175" font-family="Arial, sans-serif" font-size="28" fill="#B39DDB" text-anchor="middle">From Problems to Solutions | 2017 → 2025</text>
+  
+  <!-- Quote -->
+  <rect x="300" y="210" width="600" height="50" rx="25" fill="rgba(255,255,255,0.1)"/>
+  <text x="600" y="243" font-family="Georgia, serif" font-size="18" font-style="italic" fill="#E1BEE7" text-anchor="middle">"Attention Is All You Need" - Vaswani et al., 2017</text>
+  
+  <!-- Stats badges -->
+  <rect x="200" y="290" width="150" height="70" rx="10" fill="rgba(0,188,212,0.2)" stroke="#00BCD4" stroke-width="2"/>
+  <text x="275" y="320" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#00BCD4" text-anchor="middle">39+</text>
+  <text x="275" y="345" font-family="Arial, sans-serif" font-size="12" fill="#80DEEA" text-anchor="middle">SVG Diagrams</text>
+  
+  <rect x="400" y="290" width="150" height="70" rx="10" fill="rgba(76,175,80,0.2)" stroke="#4CAF50" stroke-width="2"/>
+  <text x="475" y="320" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#4CAF50" text-anchor="middle">20+</text>
+  <text x="475" y="345" font-family="Arial, sans-serif" font-size="12" fill="#A5D6A7" text-anchor="middle">Architectures</text>
+  
+  <rect x="600" y="290" width="150" height="70" rx="10" fill="rgba(255,152,0,0.2)" stroke="#FF9800" stroke-width="2"/>
+  <text x="675" y="320" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FF9800" text-anchor="middle">2017-25</text>
+  <text x="675" y="345" font-family="Arial, sans-serif" font-size="12" fill="#FFCC80" text-anchor="middle">8 Year Evolution</text>
+  
+  <rect x="800" y="290" width="150" height="70" rx="10" fill="rgba(233,30,99,0.2)" stroke="#E91E63" stroke-width="2"/>
+  <text x="875" y="320" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#E91E63" text-anchor="middle">100%</text>
+  <text x="875" y="345" font-family="Arial, sans-serif" font-size="12" fill="#F48FB1" text-anchor="middle">Math + Code</text>
+  
+  <!-- Transformer icon -->
+  <rect x="550" y="35" width="100" height="40" rx="5" fill="#7C4DFF"/>
+  <text x="600" y="62" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">TRANSFORMER</text>
+</svg>

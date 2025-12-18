@@ -1,0 +1,95 @@
+<svg width="1000" height="500" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="1000" height="500" fill="#FAFAFA"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#333" text-anchor="middle">Visual Learning Path</text>
+  
+  <!-- Path line -->
+  <path d="M100 120 L900 120 L900 250 L100 250 L100 380 L900 380" stroke="#E0E0E0" stroke-width="4" fill="none" stroke-dasharray="10,5"/>
+  
+  <!-- Section 1: Fundamentals -->
+  <rect x="50" y="80" width="180" height="80" rx="10" fill="#E3F2FD" stroke="#2196F3" stroke-width="3"/>
+  <text x="140" y="110" font-family="Arial, sans-serif" font-size="11" fill="#1565C0" text-anchor="middle">1. FUNDAMENTALS</text>
+  <text x="140" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565C0" text-anchor="middle">Why Transformers?</text>
+  <text x="140" y="148" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">RNN Problems → Solution</text>
+  
+  <!-- Section 2: Architecture -->
+  <rect x="280" y="80" width="180" height="80" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="3"/>
+  <text x="370" y="110" font-family="Arial, sans-serif" font-size="11" fill="#2E7D32" text-anchor="middle">2. ARCHITECTURE</text>
+  <text x="370" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2E7D32" text-anchor="middle">Self-Attention</text>
+  <text x="370" y="148" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Q, K, V + Multi-Head</text>
+  
+  <!-- Section 3: Math -->
+  <rect x="510" y="80" width="180" height="80" rx="10" fill="#FFF3E0" stroke="#FF9800" stroke-width="3"/>
+  <text x="600" y="110" font-family="Arial, sans-serif" font-size="11" fill="#E65100" text-anchor="middle">3. MATHEMATICS</text>
+  <text x="600" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#E65100" text-anchor="middle">Step-by-Step</text>
+  <text x="600" y="148" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Formulas + Examples</text>
+  
+  <!-- Section 4: Components -->
+  <rect x="740" y="80" width="180" height="80" rx="10" fill="#F3E5F5" stroke="#9C27B0" stroke-width="3"/>
+  <text x="830" y="110" font-family="Arial, sans-serif" font-size="11" fill="#7B1FA2" text-anchor="middle">4. COMPONENTS</text>
+  <text x="830" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7B1FA2" text-anchor="middle">Deep Dive</text>
+  <text x="830" y="148" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">FFN, LayerNorm, RoPE</text>
+  
+  <!-- Section 5: Evolution -->
+  <rect x="740" y="210" width="180" height="80" rx="10" fill="#FCE4EC" stroke="#E91E63" stroke-width="3"/>
+  <text x="830" y="240" font-family="Arial, sans-serif" font-size="11" fill="#C2185B" text-anchor="middle">5. EVOLUTION</text>
+  <text x="830" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#C2185B" text-anchor="middle">2017 → 2025</text>
+  <text x="830" y="278" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">BERT → GPT → LLaMA</text>
+  
+  <!-- Section 6: Comparisons -->
+  <rect x="510" y="210" width="180" height="80" rx="10" fill="#E0F7FA" stroke="#00BCD4" stroke-width="3"/>
+  <text x="600" y="240" font-family="Arial, sans-serif" font-size="11" fill="#00838F" text-anchor="middle">6. COMPARISONS</text>
+  <text x="600" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#00838F" text-anchor="middle">Block Diagrams</text>
+  <text x="600" y="278" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Side-by-Side Views</text>
+  
+  <!-- Section 7: Implementation -->
+  <rect x="280" y="210" width="180" height="80" rx="10" fill="#EFEBE9" stroke="#795548" stroke-width="3"/>
+  <text x="370" y="240" font-family="Arial, sans-serif" font-size="11" fill="#5D4037" text-anchor="middle">7. IMPLEMENTATION</text>
+  <text x="370" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#5D4037" text-anchor="middle">Code Examples</text>
+  <text x="370" y="278" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">PyTorch Complete</text>
+  
+  <!-- Section 8: Optimizations -->
+  <rect x="50" y="210" width="180" height="80" rx="10" fill="#FFEBEE" stroke="#F44336" stroke-width="3"/>
+  <text x="140" y="240" font-family="Arial, sans-serif" font-size="11" fill="#C62828" text-anchor="middle">8. OPTIMIZATIONS</text>
+  <text x="140" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#C62828" text-anchor="middle">Flash, KV Cache</text>
+  <text x="140" y="278" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Speed + Memory</text>
+  
+  <!-- Section 9: Complexity -->
+  <rect x="50" y="340" width="180" height="80" rx="10" fill="#E8EAF6" stroke="#3F51B5" stroke-width="3"/>
+  <text x="140" y="370" font-family="Arial, sans-serif" font-size="11" fill="#303F9F" text-anchor="middle">9. COMPLEXITY</text>
+  <text x="140" y="390" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#303F9F" text-anchor="middle">O(n²) → O(n)</text>
+  <text x="140" y="408" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Sparse, Linear, LSH</text>
+  
+  <!-- Section 10: Advanced -->
+  <rect x="280" y="340" width="180" height="80" rx="10" fill="#E0F2F1" stroke="#009688" stroke-width="3"/>
+  <text x="370" y="370" font-family="Arial, sans-serif" font-size="11" fill="#00695C" text-anchor="middle">10. ADVANCED 2025</text>
+  <text x="370" y="390" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#00695C" text-anchor="middle">GLA, Mamba, KDA</text>
+  <text x="370" y="408" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">State of the Art</text>
+  
+  <!-- Section 11: Hybrid -->
+  <rect x="510" y="340" width="180" height="80" rx="10" fill="#FFFDE7" stroke="#FFC107" stroke-width="3"/>
+  <text x="600" y="370" font-family="Arial, sans-serif" font-size="11" fill="#F57F17" text-anchor="middle">11. HYBRID</text>
+  <text x="600" y="390" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#F57F17" text-anchor="middle">Kimi Linear</text>
+  <text x="600" y="408" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Best of Both Worlds</text>
+  
+  <!-- Final -->
+  <rect x="740" y="340" width="180" height="80" rx="10" fill="#1A237E" stroke="#3F51B5" stroke-width="3"/>
+  <text x="830" y="370" font-family="Arial, sans-serif" font-size="11" fill="#9FA8DA" text-anchor="middle">12. CONCLUSION</text>
+  <text x="830" y="390" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Further Reading</text>
+  <text x="830" y="408" font-family="Arial, sans-serif" font-size="10" fill="#9FA8DA" text-anchor="middle">Papers + Resources</text>
+  
+  <!-- Arrows -->
+  <polygon points="235,120 250,110 250,130" fill="#2196F3"/>
+  <polygon points="465,120 480,110 480,130" fill="#4CAF50"/>
+  <polygon points="695,120 710,110 710,130" fill="#FF9800"/>
+  <polygon points="830,165 820,180 840,180" fill="#9C27B0"/>
+  <polygon points="735,250 720,240 720,260" fill="#E91E63"/>
+  <polygon points="505,250 490,240 490,260" fill="#00BCD4"/>
+  <polygon points="275,250 260,240 260,260" fill="#795548"/>
+  <polygon points="140,295 130,310 150,310" fill="#F44336"/>
+  <polygon points="235,380 250,370 250,390" fill="#3F51B5"/>
+  <polygon points="465,380 480,370 480,390" fill="#009688"/>
+  <polygon points="695,380 710,370 710,390" fill="#FFC107"/>
+</svg>

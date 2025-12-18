@@ -1,0 +1,52 @@
+<svg width="950" height="650" viewBox="0 0 950 650" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="950" height="50" fill="#673AB7"/>
+  <text x="475" y="33" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">Delta Rule &amp; DeltaNet Attention</text>
+  
+  <!-- Key Insight -->
+  <rect x="30" y="70" width="890" height="90" rx="10" fill="#EDE7F6" stroke="#673AB7" stroke-width="3"/>
+  <text x="475" y="100" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#512DA8" text-anchor="middle">Key Insight: Learn to forget old information while adding new</text>
+  <text x="475" y="130" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">The Delta Rule updates memory by subtracting old associations before adding new ones</text>
+  
+  <!-- Standard Linear Attention -->
+  <rect x="30" y="180" width="420" height="180" rx="10" fill="#FFEBEE" stroke="#F44336" stroke-width="2"/>
+  <text x="240" y="210" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#C62828" text-anchor="middle">Standard Linear Attention</text>
+  
+  <text x="50" y="245" font-family="Courier New, monospace" font-size="11" fill="#333">S_t = S_{t-1} + k_t v_t^T</text>
+  <text x="50" y="275" font-family="Courier New, monospace" font-size="11" fill="#333">o_t = q_t^T S_t</text>
+  
+  <text x="50" y="315" font-family="Arial, sans-serif" font-size="11" fill="#C62828">Problem: Memory never forgets!</text>
+  <text x="50" y="340" font-family="Arial, sans-serif" font-size="11" fill="#666">Old associations accumulate → interference</text>
+  
+  <!-- Delta Rule -->
+  <rect x="500" y="180" width="420" height="180" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="710" y="210" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2E7D32" text-anchor="middle">Delta Rule Attention</text>
+  
+  <text x="520" y="245" font-family="Courier New, monospace" font-size="11" fill="#333">S_t = S_{t-1} + k_t (v_t - k_t^T S_{t-1})^T</text>
+  <text x="520" y="275" font-family="Courier New, monospace" font-size="11" fill="#333">    = S_{t-1} + k_t β_t (v_t - S_{t-1}^T k_t)^T</text>
+  
+  <text x="520" y="315" font-family="Arial, sans-serif" font-size="11" fill="#2E7D32">Key: Subtract old value before adding new!</text>
+  <text x="520" y="340" font-family="Arial, sans-serif" font-size="11" fill="#666">β_t = learning rate, controls update strength</text>
+  
+  <!-- Gated DeltaNet -->
+  <rect x="30" y="380" width="890" height="250" rx="10" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="475" y="410" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">Gated DeltaNet (GDN) &amp; Kimi Delta Attention (KDA)</text>
+  
+  <!-- GDN -->
+  <rect x="50" y="435" width="400" height="170" rx="8" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+  <text x="250" y="465" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565C0" text-anchor="middle">Gated DeltaNet (GDN)</text>
+  
+  <text x="70" y="495" font-family="Courier New, monospace" font-size="10" fill="#333">S_t = γ_t S_{t-1} + k_t β_t (v_t - S_{t-1}^T k_t)^T</text>
+  <text x="70" y="525" font-family="Arial, sans-serif" font-size="10" fill="#666">γ_t = forget gate (head-wise)</text>
+  <text x="70" y="550" font-family="Arial, sans-serif" font-size="10" fill="#666">β_t = learning rate</text>
+  <text x="70" y="580" font-family="Arial, sans-serif" font-size="10" fill="#1565C0">Coarse-grained: same γ for all dims</text>
+  
+  <!-- KDA -->
+  <rect x="500" y="435" width="400" height="170" rx="8" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <text x="700" y="465" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#E65100" text-anchor="middle">Kimi Delta Attention (KDA)</text>
+  
+  <text x="520" y="495" font-family="Courier New, monospace" font-size="10" fill="#333">S_t = Diag(γ_t) S_{t-1} + k_t u_t^T</text>
+  <text x="520" y="525" font-family="Arial, sans-serif" font-size="10" fill="#666">γ_t = channel-wise forget gate</text>
+  <text x="520" y="550" font-family="Arial, sans-serif" font-size="10" fill="#666">Each dimension has independent decay!</text>
+  <text x="520" y="580" font-family="Arial, sans-serif" font-size="10" fill="#E65100">Fine-grained: γ ∈ R^d (per dimension)</text>
+</svg>

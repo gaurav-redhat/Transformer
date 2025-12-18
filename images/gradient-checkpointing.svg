@@ -1,0 +1,79 @@
+<svg width="900" height="500" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="900" height="50" fill="#E91E63"/>
+  <text x="450" y="33" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">Gradient Checkpointing: Trade Compute for Memory</text>
+  
+  <!-- Standard approach -->
+  <rect x="30" y="70" width="400" height="190" rx="10" fill="#FFEBEE" stroke="#F44336" stroke-width="2"/>
+  <text x="230" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#C62828" text-anchor="middle">Standard Training (High Memory)</text>
+  
+  <!-- Forward pass memory -->
+  <text x="50" y="130" font-family="Arial, sans-serif" font-size="11" fill="#333">Forward Pass: Store ALL activations</text>
+  
+  <rect x="60" y="145" width="40" height="30" fill="#EF5350"/>
+  <text x="80" y="165" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">L1</text>
+  <rect x="105" y="145" width="40" height="30" fill="#EF5350"/>
+  <text x="125" y="165" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">L2</text>
+  <rect x="150" y="145" width="40" height="30" fill="#EF5350"/>
+  <text x="170" y="165" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">L3</text>
+  <text x="205" y="165" font-family="Arial, sans-serif" font-size="12" fill="#333">...</text>
+  <rect x="225" y="145" width="40" height="30" fill="#EF5350"/>
+  <text x="245" y="165" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">L96</text>
+  
+  <text x="280" y="165" font-family="Arial, sans-serif" font-size="10" fill="#C62828">ALL stored!</text>
+  
+  <text x="50" y="200" font-family="Arial, sans-serif" font-size="11" fill="#333">Backward Pass: Use stored activations</text>
+  <text x="50" y="225" font-family="Arial, sans-serif" font-size="10" fill="#C62828">Memory: O(n_layers) = 96 × activation_size</text>
+  <text x="50" y="250" font-family="Arial, sans-serif" font-size="10" fill="#C62828">GPT-3: ~400 GB just for activations!</text>
+  
+  <!-- Checkpointing approach -->
+  <rect x="470" y="70" width="400" height="190" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="670" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2E7D32" text-anchor="middle">Gradient Checkpointing (Low Memory)</text>
+  
+  <text x="490" y="130" font-family="Arial, sans-serif" font-size="11" fill="#333">Forward Pass: Only store checkpoints</text>
+  
+  <rect x="500" y="145" width="40" height="30" fill="#4CAF50"/>
+  <text x="520" y="165" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">L1</text>
+  <rect x="545" y="145" width="40" height="30" fill="#E0E0E0"/>
+  <rect x="590" y="145" width="40" height="30" fill="#E0E0E0"/>
+  <rect x="635" y="145" width="40" height="30" fill="#4CAF50"/>
+  <text x="655" y="165" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">L32</text>
+  <rect x="680" y="145" width="40" height="30" fill="#E0E0E0"/>
+  <rect x="725" y="145" width="40" height="30" fill="#4CAF50"/>
+  <text x="745" y="165" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">L64</text>
+  <rect x="770" y="145" width="40" height="30" fill="#4CAF50"/>
+  <text x="790" y="165" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">L96</text>
+  
+  <text x="490" y="200" font-family="Arial, sans-serif" font-size="11" fill="#333">Backward: Recompute from checkpoints</text>
+  <text x="490" y="225" font-family="Arial, sans-serif" font-size="10" fill="#2E7D32">Memory: O(sqrt(n_layers)) = ~10 checkpoints</text>
+  <text x="490" y="250" font-family="Arial, sans-serif" font-size="10" fill="#2E7D32">Trade: 33% more compute for 90% less memory!</text>
+  
+  <!-- Comparison diagram -->
+  <rect x="30" y="280" width="840" height="200" rx="10" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="450" y="310" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">Memory vs Compute Tradeoff</text>
+  
+  <!-- Memory bars -->
+  <text x="100" y="345" font-family="Arial, sans-serif" font-size="11" fill="#333">Memory Usage:</text>
+  
+  <rect x="200" y="335" width="400" height="25" fill="#EF5350"/>
+  <text x="400" y="352" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Standard: 100% (400 GB)</text>
+  
+  <rect x="200" y="365" width="130" height="25" fill="#4CAF50"/>
+  <text x="265" y="382" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Checkpoint: 33%</text>
+  
+  <!-- Compute bars -->
+  <text x="100" y="420" font-family="Arial, sans-serif" font-size="11" fill="#333">Compute Time:</text>
+  
+  <rect x="200" y="410" width="300" height="25" fill="#BBDEFB"/>
+  <text x="350" y="427" font-family="Arial, sans-serif" font-size="10" fill="#1565C0" text-anchor="middle">Standard: 100%</text>
+  
+  <rect x="200" y="440" width="400" height="25" fill="#90CAF9"/>
+  <text x="400" y="457" font-family="Arial, sans-serif" font-size="10" fill="#1565C0" text-anchor="middle">Checkpoint: ~133% (recompute)</text>
+  
+  <!-- Summary -->
+  <rect x="650" y="350" width="200" height="100" rx="8" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="750" y="380" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32" text-anchor="middle">Result</text>
+  <text x="750" y="405" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Train larger models</text>
+  <text x="750" y="425" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">on limited GPU memory</text>
+  <text x="750" y="445" font-family="Arial, sans-serif" font-size="10" fill="#2E7D32" text-anchor="middle">Essential for 70B+ models</text>
+</svg>

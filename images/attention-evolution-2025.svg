@@ -1,0 +1,152 @@
+<svg width="1000" height="750" viewBox="0 0 1000 750" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="1000" height="55" fill="#1A237E"/>
+  <text x="500" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">Attention Architecture Evolution: Complete 2025 Guide</text>
+  
+  <!-- Timeline -->
+  <line x1="50" y1="90" x2="950" y2="90" stroke="#333" stroke-width="4"/>
+  
+  <!-- 2017 -->
+  <circle cx="100" cy="90" r="18" fill="#4CAF50"/>
+  <text x="100" y="95" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">2017</text>
+  <text x="100" y="125" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Vanilla</text>
+  
+  <!-- 2020 -->
+  <circle cx="250" cy="90" r="18" fill="#2196F3"/>
+  <text x="250" y="95" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">2020</text>
+  <text x="250" y="125" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Sparse</text>
+  
+  <!-- 2022 -->
+  <circle cx="400" cy="90" r="18" fill="#FF9800"/>
+  <text x="400" y="95" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">2022</text>
+  <text x="400" y="125" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Flash</text>
+  
+  <!-- 2023 -->
+  <circle cx="550" cy="90" r="18" fill="#9C27B0"/>
+  <text x="550" y="95" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">2023</text>
+  <text x="550" y="125" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Mamba</text>
+  
+  <!-- 2024 -->
+  <circle cx="700" cy="90" r="18" fill="#E91E63"/>
+  <text x="700" y="95" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">2024</text>
+  <text x="700" y="125" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">GLA/MLA</text>
+  
+  <!-- 2025 -->
+  <circle cx="850" cy="90" r="18" fill="#00BCD4"/>
+  <text x="850" y="95" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">2025</text>
+  <text x="850" y="125" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">KDA</text>
+  
+  <!-- Category boxes -->
+  
+  <!-- Full Attention -->
+  <rect x="30" y="150" width="300" height="180" rx="10" fill="#FFEBEE" stroke="#F44336" stroke-width="2"/>
+  <text x="180" y="175" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#C62828" text-anchor="middle">Full Attention O(n²)</text>
+  
+  <text x="50" y="205" font-family="Arial, sans-serif" font-size="10" fill="#333">• Standard Self-Attention</text>
+  <text x="50" y="225" font-family="Arial, sans-serif" font-size="10" fill="#333">• Multi-Head Attention (MHA)</text>
+  <text x="50" y="245" font-family="Arial, sans-serif" font-size="10" fill="#333">• Grouped Query Attention (GQA)</text>
+  <text x="50" y="265" font-family="Arial, sans-serif" font-size="10" fill="#333">• Multi-Head Latent Attention (MLA)</text>
+  <text x="50" y="290" font-family="Arial, sans-serif" font-size="9" fill="#666">Flash Attention: Same complexity, O(n) memory</text>
+  <text x="50" y="315" font-family="Arial, sans-serif" font-size="9" fill="#C62828">Best quality, expensive for long ctx</text>
+  
+  <!-- Sparse Attention -->
+  <rect x="350" y="150" width="300" height="180" rx="10" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+  <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565C0" text-anchor="middle">Sparse Attention O(n√n)</text>
+  
+  <text x="370" y="205" font-family="Arial, sans-serif" font-size="10" fill="#333">• Sliding Window (Mistral)</text>
+  <text x="370" y="225" font-family="Arial, sans-serif" font-size="10" fill="#333">• Longformer (Global + Local)</text>
+  <text x="370" y="245" font-family="Arial, sans-serif" font-size="10" fill="#333">• BigBird (+ Random)</text>
+  <text x="370" y="265" font-family="Arial, sans-serif" font-size="10" fill="#333">• LSH / Reformer O(n log n)</text>
+  <text x="370" y="290" font-family="Arial, sans-serif" font-size="9" fill="#666">Fixed patterns, local + sparse global</text>
+  <text x="370" y="315" font-family="Arial, sans-serif" font-size="9" fill="#1565C0">Good for long docs, loses some info</text>
+  
+  <!-- Linear Attention -->
+  <rect x="670" y="150" width="300" height="180" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="820" y="175" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2E7D32" text-anchor="middle">Linear Attention O(n)</text>
+  
+  <text x="690" y="205" font-family="Arial, sans-serif" font-size="10" fill="#333">• Performer (kernel approx)</text>
+  <text x="690" y="225" font-family="Arial, sans-serif" font-size="10" fill="#333">• Linear Transformer</text>
+  <text x="690" y="245" font-family="Arial, sans-serif" font-size="10" fill="#333">• Linformer (low-rank)</text>
+  <text x="690" y="265" font-family="Arial, sans-serif" font-size="10" fill="#333">• RWKV</text>
+  <text x="690" y="290" font-family="Arial, sans-serif" font-size="9" fill="#666">Kernel trick: (QK^T)V → Q(K^TV)</text>
+  <text x="690" y="315" font-family="Arial, sans-serif" font-size="9" fill="#4CAF50">Fast but approximation error</text>
+  
+  <!-- Gated Linear -->
+  <rect x="30" y="350" width="300" height="180" rx="10" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <text x="180" y="375" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#E65100" text-anchor="middle">Gated Linear O(n)</text>
+  
+  <text x="50" y="405" font-family="Arial, sans-serif" font-size="10" fill="#333">• GLA (Gated Linear Attention)</text>
+  <text x="50" y="425" font-family="Arial, sans-serif" font-size="10" fill="#333">• DeltaNet (Delta Rule)</text>
+  <text x="50" y="445" font-family="Arial, sans-serif" font-size="10" fill="#333">• Gated DeltaNet (GDN)</text>
+  <text x="50" y="465" font-family="Arial, sans-serif" font-size="10" fill="#333">• KDA (Kimi Delta Attention)</text>
+  <text x="50" y="490" font-family="Arial, sans-serif" font-size="9" fill="#666">Data-dependent forgetting + Delta rule</text>
+  <text x="50" y="515" font-family="Arial, sans-serif" font-size="9" fill="#E65100">Matches full attention quality!</text>
+  
+  <!-- SSM -->
+  <rect x="350" y="350" width="300" height="180" rx="10" fill="#F3E5F5" stroke="#9C27B0" stroke-width="2"/>
+  <text x="500" y="375" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7B1FA2" text-anchor="middle">State Space Models O(n)</text>
+  
+  <text x="370" y="405" font-family="Arial, sans-serif" font-size="10" fill="#333">• S4 (Structured SSM)</text>
+  <text x="370" y="425" font-family="Arial, sans-serif" font-size="10" fill="#333">• Mamba (Selective SSM)</text>
+  <text x="370" y="445" font-family="Arial, sans-serif" font-size="10" fill="#333">• Mamba-2</text>
+  <text x="370" y="465" font-family="Arial, sans-serif" font-size="10" fill="#333">• Jamba (hybrid)</text>
+  <text x="370" y="490" font-family="Arial, sans-serif" font-size="9" fill="#666">h'(t) = Ah(t) + Bx(t), selective params</text>
+  <text x="370" y="515" font-family="Arial, sans-serif" font-size="9" fill="#7B1FA2">O(1) state, struggles with recall</text>
+  
+  <!-- Hybrid -->
+  <rect x="670" y="350" width="300" height="180" rx="10" fill="#E0F7FA" stroke="#00BCD4" stroke-width="3"/>
+  <text x="820" y="375" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#00838F" text-anchor="middle">Hybrid (2025 SOTA)</text>
+  
+  <text x="690" y="405" font-family="Arial, sans-serif" font-size="10" fill="#333">• Kimi Linear (KDA + MLA)</text>
+  <text x="690" y="425" font-family="Arial, sans-serif" font-size="10" fill="#333">• Jamba (Mamba + Attention)</text>
+  <text x="690" y="445" font-family="Arial, sans-serif" font-size="10" fill="#333">• Zamba (SSM + Attention)</text>
+  <text x="690" y="465" font-family="Arial, sans-serif" font-size="10" fill="#333">• Griffin (Gated Linear + MQA)</text>
+  <text x="690" y="490" font-family="Arial, sans-serif" font-size="9" fill="#666">Linear for speed, periodic full for quality</text>
+  <text x="690" y="515" font-family="Arial, sans-serif" font-size="9" fill="#00838F">BEST: 6× speed, same quality!</text>
+  
+  <!-- Summary table -->
+  <rect x="30" y="550" width="940" height="180" rx="10" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="500" y="580" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">2025 Attention Methods Comparison</text>
+  
+  <!-- Headers -->
+  <rect x="50" y="600" width="140" height="25" fill="#E0E0E0"/>
+  <text x="120" y="617" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">Method</text>
+  <rect x="190" y="600" width="100" height="25" fill="#E0E0E0"/>
+  <text x="240" y="617" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">Time</text>
+  <rect x="290" y="600" width="100" height="25" fill="#E0E0E0"/>
+  <text x="340" y="617" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">Memory</text>
+  <rect x="390" y="600" width="100" height="25" fill="#E0E0E0"/>
+  <text x="440" y="617" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">Quality</text>
+  <rect x="490" y="600" width="140" height="25" fill="#E0E0E0"/>
+  <text x="560" y="617" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">Key Innovation</text>
+  <rect x="630" y="600" width="150" height="25" fill="#E0E0E0"/>
+  <text x="705" y="617" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">Models</text>
+  <rect x="780" y="600" width="170" height="25" fill="#E0E0E0"/>
+  <text x="865" y="617" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333" text-anchor="middle">Best For</text>
+  
+  <!-- Data rows -->
+  <text x="120" y="645" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Flash Attention</text>
+  <text x="240" y="645" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">O(n²d)</text>
+  <text x="340" y="645" font-family="Arial, sans-serif" font-size="9" fill="#4CAF50" text-anchor="middle">O(n)</text>
+  <text x="440" y="645" font-family="Arial, sans-serif" font-size="9" fill="#4CAF50" text-anchor="middle">100%</text>
+  <text x="560" y="645" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Tiled IO</text>
+  <text x="705" y="645" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">LLaMA, GPT-4</text>
+  <text x="865" y="645" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Training, short-mid ctx</text>
+  
+  <text x="120" y="670" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">GLA + Delta</text>
+  <text x="240" y="670" font-family="Arial, sans-serif" font-size="9" fill="#4CAF50" text-anchor="middle">O(nd²)</text>
+  <text x="340" y="670" font-family="Arial, sans-serif" font-size="9" fill="#4CAF50" text-anchor="middle">O(nd)</text>
+  <text x="440" y="670" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">~99%</text>
+  <text x="560" y="670" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Gating + Delta</text>
+  <text x="705" y="670" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">GLA, DeltaNet</text>
+  <text x="865" y="670" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Long ctx inference</text>
+  
+  <rect x="50" y="680" width="900" height="25" fill="#E0F7FA"/>
+  <text x="120" y="697" font-family="Arial, sans-serif" font-size="9" fill="#00838F" font-weight="bold" text-anchor="middle">Kimi Linear</text>
+  <text x="240" y="697" font-family="Arial, sans-serif" font-size="9" fill="#00838F" font-weight="bold" text-anchor="middle">O(nd²)</text>
+  <text x="340" y="697" font-family="Arial, sans-serif" font-size="9" fill="#00838F" font-weight="bold" text-anchor="middle">25% KV</text>
+  <text x="440" y="697" font-family="Arial, sans-serif" font-size="9" fill="#00838F" font-weight="bold" text-anchor="middle">101%+</text>
+  <text x="560" y="697" font-family="Arial, sans-serif" font-size="9" fill="#00838F" font-weight="bold" text-anchor="middle">KDA + MLA hybrid</text>
+  <text x="705" y="697" font-family="Arial, sans-serif" font-size="9" fill="#00838F" font-weight="bold" text-anchor="middle">Kimi Linear</text>
+  <text x="865" y="697" font-family="Arial, sans-serif" font-size="9" fill="#00838F" font-weight="bold" text-anchor="middle">1M ctx, 6× faster</text>
+</svg>

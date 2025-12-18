@@ -1,0 +1,101 @@
+<svg width="850" height="600" viewBox="0 0 850 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="850" height="45" fill="#673AB7"/>
+  <text x="425" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Encoder-Decoder Architecture</text>
+  
+  <!-- ENCODER Section -->
+  <rect x="40" y="70" width="350" height="470" rx="12" fill="#E8F5E9" stroke="#4CAF50" stroke-width="3"/>
+  <text x="215" y="100" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2E7D32" text-anchor="middle">ENCODER</text>
+  
+  <!-- Encoder Layers -->
+  <rect x="70" y="120" width="290" height="80" rx="8" fill="white" stroke="#4CAF50" stroke-width="2"/>
+  <text x="215" y="150" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32" text-anchor="middle">Layer 6</text>
+  <rect x="85" y="165" width="80" height="25" rx="4" fill="#FF9800"/>
+  <text x="125" y="182" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Self-Attn</text>
+  <rect x="180" y="165" width="60" height="25" rx="4" fill="#9C27B0"/>
+  <text x="210" y="182" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">FFN</text>
+  <rect x="255" y="165" width="80" height="25" rx="4" fill="#FFE082"/>
+  <text x="295" y="182" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Add+Norm</text>
+  
+  <!-- Dots -->
+  <text x="215" y="230" font-family="Arial, sans-serif" font-size="24" fill="#4CAF50" text-anchor="middle">...</text>
+  
+  <rect x="70" y="250" width="290" height="80" rx="8" fill="white" stroke="#4CAF50" stroke-width="2"/>
+  <text x="215" y="280" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32" text-anchor="middle">Layer 1</text>
+  <rect x="85" y="295" width="80" height="25" rx="4" fill="#FF9800"/>
+  <text x="125" y="312" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Self-Attn</text>
+  <rect x="180" y="295" width="60" height="25" rx="4" fill="#9C27B0"/>
+  <text x="210" y="312" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">FFN</text>
+  <rect x="255" y="295" width="80" height="25" rx="4" fill="#FFE082"/>
+  <text x="295" y="312" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Add+Norm</text>
+  
+  <!-- Input Processing (Encoder) -->
+  <rect x="100" y="380" width="230" height="40" rx="6" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+  <text x="215" y="405" font-family="Arial, sans-serif" font-size="11" fill="#1976D2" text-anchor="middle">Input Embedding + Positional Enc</text>
+  
+  <!-- Source Input -->
+  <rect x="130" y="460" width="170" height="35" rx="6" fill="#ECEFF1" stroke="#607D8B" stroke-width="2"/>
+  <text x="215" y="483" font-family="Arial, sans-serif" font-size="11" fill="#455A64" text-anchor="middle">Source: "Hello World"</text>
+  
+  <!-- DECODER Section -->
+  <rect x="460" y="70" width="350" height="470" rx="12" fill="#E3F2FD" stroke="#2196F3" stroke-width="3"/>
+  <text x="635" y="100" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1565C0" text-anchor="middle">DECODER</text>
+  
+  <!-- Decoder Layers -->
+  <rect x="490" y="120" width="290" height="100" rx="8" fill="white" stroke="#2196F3" stroke-width="2"/>
+  <text x="635" y="145" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565C0" text-anchor="middle">Layer 6</text>
+  <rect x="505" y="155" width="70" height="20" rx="3" fill="#FF9800"/>
+  <text x="540" y="170" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Masked Attn</text>
+  <rect x="585" y="155" width="70" height="20" rx="3" fill="#FF5722"/>
+  <text x="620" y="170" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Cross Attn</text>
+  <rect x="665" y="155" width="50" height="20" rx="3" fill="#9C27B0"/>
+  <text x="690" y="170" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">FFN</text>
+  <rect x="725" y="155" width="40" height="20" rx="3" fill="#FFE082"/>
+  <text x="745" y="170" font-family="Arial, sans-serif" font-size="7" fill="#333" text-anchor="middle">Add+N</text>
+  
+  <!-- Dots -->
+  <text x="635" y="250" font-family="Arial, sans-serif" font-size="24" fill="#2196F3" text-anchor="middle">...</text>
+  
+  <rect x="490" y="265" width="290" height="100" rx="8" fill="white" stroke="#2196F3" stroke-width="2"/>
+  <text x="635" y="290" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565C0" text-anchor="middle">Layer 1</text>
+  <rect x="505" y="305" width="70" height="20" rx="3" fill="#FF9800"/>
+  <text x="540" y="320" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Masked Attn</text>
+  <rect x="585" y="305" width="70" height="20" rx="3" fill="#FF5722"/>
+  <text x="620" y="320" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">Cross Attn</text>
+  <rect x="665" y="305" width="50" height="20" rx="3" fill="#9C27B0"/>
+  <text x="690" y="320" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">FFN</text>
+  <rect x="725" y="305" width="40" height="20" rx="3" fill="#FFE082"/>
+  <text x="745" y="320" font-family="Arial, sans-serif" font-size="7" fill="#333" text-anchor="middle">Add+N</text>
+  
+  <!-- Input Processing (Decoder) -->
+  <rect x="520" y="400" width="230" height="40" rx="6" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <text x="635" y="425" font-family="Arial, sans-serif" font-size="11" fill="#E65100" text-anchor="middle">Output Embedding + Positional Enc</text>
+  
+  <!-- Target Input -->
+  <rect x="550" y="460" width="170" height="35" rx="6" fill="#ECEFF1" stroke="#607D8B" stroke-width="2"/>
+  <text x="635" y="483" font-family="Arial, sans-serif" font-size="11" fill="#455A64" text-anchor="middle">Target: "Hola Mundo"</text>
+  
+  <!-- Cross-Attention Connection -->
+  <line x1="390" y1="175" x2="460" y2="175" stroke="#FF5722" stroke-width="3"/>
+  <polygon points="455,170 465,175 455,180" fill="#FF5722"/>
+  <line x1="390" y1="315" x2="460" y2="315" stroke="#FF5722" stroke-width="3"/>
+  <polygon points="455,310 465,315 455,320" fill="#FF5722"/>
+  <text x="425" y="250" font-family="Arial, sans-serif" font-size="10" fill="#FF5722" text-anchor="middle">K, V</text>
+  
+  <!-- Output -->
+  <rect x="580" y="20" width="110" height="30" rx="5" fill="#FFECB3" stroke="#FFC107" stroke-width="2"/>
+  <text x="635" y="40" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#F57F17" text-anchor="middle">Linear + Softmax</text>
+  
+  <!-- Legend -->
+  <rect x="40" y="555" width="770" height="35" rx="6" fill="#F5F5F5" stroke="#E0E0E0"/>
+  <rect x="60" y="565" width="40" height="15" rx="2" fill="#FF9800"/>
+  <text x="110" y="577" font-family="Arial, sans-serif" font-size="9" fill="#333">Self-Attention</text>
+  <rect x="190" y="565" width="40" height="15" rx="2" fill="#FF5722"/>
+  <text x="240" y="577" font-family="Arial, sans-serif" font-size="9" fill="#333">Cross-Attention</text>
+  <rect x="330" y="565" width="40" height="15" rx="2" fill="#9C27B0"/>
+  <text x="380" y="577" font-family="Arial, sans-serif" font-size="9" fill="#333">FFN</text>
+  <rect x="420" y="565" width="40" height="15" rx="2" fill="#FFE082"/>
+  <text x="470" y="577" font-family="Arial, sans-serif" font-size="9" fill="#333">Add+Norm</text>
+  <line x1="540" y1="572" x2="580" y2="572" stroke="#FF5722" stroke-width="3"/>
+  <text x="610" y="577" font-family="Arial, sans-serif" font-size="9" fill="#333">Encoder-to-Decoder</text>
+</svg>

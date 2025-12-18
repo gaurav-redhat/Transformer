@@ -1,0 +1,86 @@
+<svg width="900" height="500" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="900" height="50" fill="#4CAF50"/>
+  <text x="450" y="33" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">The Transformer Solution: Parallel Attention</text>
+  
+  <!-- Parallel Processing -->
+  <text x="450" y="85" font-family="Arial, sans-serif" font-size="14" fill="#666" text-anchor="middle">All tokens processed simultaneously with direct connections!</text>
+  
+  <!-- Input tokens -->
+  <rect x="50" y="120" width="60" height="40" rx="5" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="80" y="145" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32" text-anchor="middle">The</text>
+  
+  <rect x="150" y="120" width="60" height="40" rx="5" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="180" y="145" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32" text-anchor="middle">cat</text>
+  
+  <rect x="250" y="120" width="60" height="40" rx="5" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="280" y="145" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32" text-anchor="middle">sat</text>
+  
+  <rect x="350" y="120" width="60" height="40" rx="5" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="380" y="145" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32" text-anchor="middle">on</text>
+  
+  <rect x="450" y="120" width="60" height="40" rx="5" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="480" y="145" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32" text-anchor="middle">the</text>
+  
+  <rect x="550" y="120" width="60" height="40" rx="5" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="580" y="145" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32" text-anchor="middle">mat</text>
+  
+  <!-- Self-Attention Layer -->
+  <rect x="40" y="190" width="580" height="80" rx="10" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <text x="330" y="225" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#E65100" text-anchor="middle">Self-Attention: Every token attends to ALL tokens</text>
+  <text x="330" y="250" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">O(1) path length between ANY two tokens!</text>
+  
+  <!-- Attention connections (showing all-to-all) -->
+  <line x1="80" y1="165" x2="80" y2="185" stroke="#4CAF50" stroke-width="2"/>
+  <line x1="180" y1="165" x2="180" y2="185" stroke="#4CAF50" stroke-width="2"/>
+  <line x1="280" y1="165" x2="280" y2="185" stroke="#4CAF50" stroke-width="2"/>
+  <line x1="380" y1="165" x2="380" y2="185" stroke="#4CAF50" stroke-width="2"/>
+  <line x1="480" y1="165" x2="480" y2="185" stroke="#4CAF50" stroke-width="2"/>
+  <line x1="580" y1="165" x2="580" y2="185" stroke="#4CAF50" stroke-width="2"/>
+  
+  <!-- Output arrows -->
+  <line x1="80" y1="275" x2="80" y2="295" stroke="#4CAF50" stroke-width="2"/>
+  <line x1="180" y1="275" x2="180" y2="295" stroke="#4CAF50" stroke-width="2"/>
+  <line x1="280" y1="275" x2="280" y2="295" stroke="#4CAF50" stroke-width="2"/>
+  <line x1="380" y1="275" x2="380" y2="295" stroke="#4CAF50" stroke-width="2"/>
+  <line x1="480" y1="275" x2="480" y2="295" stroke="#4CAF50" stroke-width="2"/>
+  <line x1="580" y1="275" x2="580" y2="295" stroke="#4CAF50" stroke-width="2"/>
+  
+  <!-- Solution boxes -->
+  <rect x="650" y="100" width="230" height="170" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="765" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2E7D32" text-anchor="middle">Direct Gradient Flow</text>
+  
+  <!-- Gradient bars (all strong) -->
+  <rect x="670" y="150" width="180" height="18" fill="#4CAF50"/>
+  <text x="760" y="163" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Gradient at t6: 1.0</text>
+  
+  <rect x="670" y="175" width="175" height="18" fill="#4CAF50"/>
+  <text x="757" y="188" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">t5: 0.97</text>
+  
+  <rect x="670" y="200" width="170" height="18" fill="#4CAF50"/>
+  <text x="755" y="213" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">t4: 0.95</text>
+  
+  <rect x="670" y="225" width="165" height="18" fill="#4CAF50"/>
+  <text x="752" y="238" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">t1: 0.92</text>
+  
+  <!-- Solution boxes -->
+  <rect x="50" y="320" width="250" height="80" rx="8" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="175" y="350" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32" text-anchor="middle">Solution 1: Parallel</text>
+  <text x="175" y="375" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">All tokens processed at once</text>
+  <text x="175" y="390" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">Massive GPU parallelization!</text>
+  
+  <rect x="320" y="320" width="250" height="80" rx="8" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+  <text x="445" y="350" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565C0" text-anchor="middle">Solution 2: Direct Paths</text>
+  <text x="445" y="375" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">Direct attention between any tokens</text>
+  <text x="445" y="390" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">No vanishing gradient!</text>
+  
+  <rect x="590" y="320" width="250" height="80" rx="8" fill="#F3E5F5" stroke="#9C27B0" stroke-width="2"/>
+  <text x="715" y="350" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7B1FA2" text-anchor="middle">Solution 3: Rich Context</text>
+  <text x="715" y="375" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">Each position has full context</text>
+  <text x="715" y="390" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">Dynamic attention weights</text>
+  
+  <!-- Math formulas -->
+  <rect x="50" y="420" width="800" height="65" rx="8" fill="#F5F5F5" stroke="#E0E0E0"/>
+  <text x="450" y="445" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333" text-anchor="middle">Attention Equation:</text>
+  <text x="450" y="470" font-family="Courier New, monospace" font-size="12" fill="#333" text-anchor="middle">Attention(Q,K,V) = softmax(QK^T / sqrt(d_k)) V    Path: O(1) | Complexity: O(n^2 * d)</text>
+</svg>

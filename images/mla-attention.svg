@@ -1,0 +1,51 @@
+<svg width="950" height="600" viewBox="0 0 950 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="950" height="50" fill="#3F51B5"/>
+  <text x="475" y="33" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">Multi-Head Latent Attention (MLA)</text>
+  
+  <!-- Key Insight -->
+  <rect x="30" y="70" width="890" height="80" rx="10" fill="#E8EAF6" stroke="#3F51B5" stroke-width="3"/>
+  <text x="475" y="100" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#303F9F" text-anchor="middle">Key Insight: Compress KV into low-rank latent space</text>
+  <text x="475" y="125" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">From DeepSeek-V2: Reduce KV cache by projecting to smaller latent dimension</text>
+  
+  <!-- Standard MHA -->
+  <rect x="30" y="170" width="420" height="200" rx="10" fill="#FFEBEE" stroke="#F44336" stroke-width="2"/>
+  <text x="240" y="200" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#C62828" text-anchor="middle">Standard Multi-Head Attention</text>
+  
+  <text x="50" y="235" font-family="Courier New, monospace" font-size="10" fill="#333">K = X @ W_K   # (n, d) → (n, h×d_k)</text>
+  <text x="50" y="260" font-family="Courier New, monospace" font-size="10" fill="#333">V = X @ W_V   # (n, d) → (n, h×d_v)</text>
+  <text x="50" y="290" font-family="Arial, sans-serif" font-size="11" fill="#C62828">KV Cache: O(n × h × d_k) per layer</text>
+  <text x="50" y="315" font-family="Arial, sans-serif" font-size="11" fill="#666">For 32 heads, d_k=128: 4096 per token</text>
+  <text x="50" y="350" font-family="Arial, sans-serif" font-size="11" fill="#C62828">32 layers × 4K = 128K per token!</text>
+  
+  <!-- MLA -->
+  <rect x="500" y="170" width="420" height="200" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="710" y="200" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2E7D32" text-anchor="middle">Multi-Head Latent Attention</text>
+  
+  <text x="520" y="235" font-family="Courier New, monospace" font-size="10" fill="#333">c = X @ W_c     # (n, d) → (n, d_c) compress</text>
+  <text x="520" y="260" font-family="Courier New, monospace" font-size="10" fill="#333">K = c @ W_K     # (n, d_c) → (n, h×d_k)</text>
+  <text x="520" y="285" font-family="Courier New, monospace" font-size="10" fill="#333">V = c @ W_V     # (n, d_c) → (n, h×d_v)</text>
+  <text x="520" y="315" font-family="Arial, sans-serif" font-size="11" fill="#2E7D32">KV Cache: O(n × d_c) only!</text>
+  <text x="520" y="340" font-family="Arial, sans-serif" font-size="11" fill="#666">d_c = 512 (vs 4096): 8× compression</text>
+  <text x="520" y="365" font-family="Arial, sans-serif" font-size="11" fill="#2E7D32">Cache c, compute K,V on-the-fly!</text>
+  
+  <!-- Math section -->
+  <rect x="30" y="390" width="890" height="190" rx="10" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="475" y="420" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">MLA Math (DeepSeek-V2 / Kimi)</text>
+  
+  <!-- Compression -->
+  <rect x="50" y="445" width="400" height="110" rx="8" fill="#E8EAF6" stroke="#3F51B5" stroke-width="2"/>
+  <text x="250" y="470" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#303F9F" text-anchor="middle">Low-Rank Compression</text>
+  
+  <text x="70" y="500" font-family="Courier New, monospace" font-size="10" fill="#333">c_KV = W_DKV × x    # d → d_c (compress)</text>
+  <text x="70" y="525" font-family="Courier New, monospace" font-size="10" fill="#333">k = W_UK × c_KV     # d_c → d_k (expand)</text>
+  <text x="70" y="550" font-family="Courier New, monospace" font-size="10" fill="#333">v = W_UV × c_KV     # d_c → d_v (expand)</text>
+  
+  <!-- RoPE handling -->
+  <rect x="500" y="445" width="400" height="110" rx="8" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <text x="700" y="470" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#E65100" text-anchor="middle">Decoupled RoPE</text>
+  
+  <text x="520" y="500" font-family="Courier New, monospace" font-size="10" fill="#333">q = [q_c; q_r]  # content + rope parts</text>
+  <text x="520" y="525" font-family="Courier New, monospace" font-size="10" fill="#333">k = [k_c; k_r]  # separate RoPE handling</text>
+  <text x="520" y="550" font-family="Arial, sans-serif" font-size="10" fill="#666">RoPE only on dedicated dims, not compressed</text>
+</svg>

@@ -1,0 +1,81 @@
+<svg width="950" height="550" viewBox="0 0 950 550" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="950" height="50" fill="#00BCD4"/>
+  <text x="475" y="33" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">Clustering / Routing Attention</text>
+  
+  <!-- Key Insight -->
+  <rect x="30" y="70" width="890" height="80" rx="10" fill="#E0F7FA" stroke="#00BCD4" stroke-width="3"/>
+  <text x="475" y="100" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00838F" text-anchor="middle">Key Insight: Group tokens into clusters, compute attention per cluster</text>
+  <text x="475" y="125" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">Complexity: O(n·c + c²·d) where c = number of clusters</text>
+  
+  <!-- Process Flow -->
+  <rect x="30" y="170" width="890" height="200" rx="10" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="475" y="200" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Clustering Attention Pipeline</text>
+  
+  <!-- Step 1: Input -->
+  <rect x="60" y="230" width="120" height="100" rx="8" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+  <text x="120" y="260" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1565C0" text-anchor="middle">1. Input</text>
+  <text x="120" y="285" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">n tokens</text>
+  <!-- Token dots -->
+  <circle cx="80" cy="310" r="8" fill="#2196F3"/>
+  <circle cx="100" cy="305" r="8" fill="#2196F3"/>
+  <circle cx="120" cy="312" r="8" fill="#2196F3"/>
+  <circle cx="140" cy="308" r="8" fill="#2196F3"/>
+  <circle cx="160" cy="315" r="8" fill="#2196F3"/>
+  
+  <!-- Arrow -->
+  <line x1="185" y1="280" x2="215" y2="280" stroke="#666" stroke-width="2"/>
+  <polygon points="210,275 220,280 210,285" fill="#666"/>
+  
+  <!-- Step 2: Cluster -->
+  <rect x="220" y="230" width="160" height="100" rx="8" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="300" y="260" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2E7D32" text-anchor="middle">2. Cluster</text>
+  <text x="300" y="285" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Group into c clusters</text>
+  <!-- Clustered dots -->
+  <circle cx="250" cy="310" r="6" fill="#4CAF50"/>
+  <circle cx="265" cy="315" r="6" fill="#4CAF50"/>
+  <circle cx="300" cy="308" r="6" fill="#FF9800"/>
+  <circle cx="315" cy="312" r="6" fill="#FF9800"/>
+  <circle cx="340" cy="310" r="6" fill="#E91E63"/>
+  
+  <!-- Arrow -->
+  <line x1="385" y1="280" x2="415" y2="280" stroke="#666" stroke-width="2"/>
+  <polygon points="410,275 420,280 410,285" fill="#666"/>
+  
+  <!-- Step 3: Centroids -->
+  <rect x="420" y="230" width="160" height="100" rx="8" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <text x="500" y="260" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#E65100" text-anchor="middle">3. Compute Centroids</text>
+  <text x="500" y="285" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">c cluster centers</text>
+  <!-- Centroid dots -->
+  <circle cx="450" cy="310" r="12" fill="#4CAF50" stroke="#2E7D32" stroke-width="2"/>
+  <circle cx="500" cy="310" r="12" fill="#FF9800" stroke="#E65100" stroke-width="2"/>
+  <circle cx="550" cy="310" r="12" fill="#E91E63" stroke="#C2185B" stroke-width="2"/>
+  
+  <!-- Arrow -->
+  <line x1="585" y1="280" x2="615" y2="280" stroke="#666" stroke-width="2"/>
+  <polygon points="610,275 620,280 610,285" fill="#666"/>
+  
+  <!-- Step 4: Attention -->
+  <rect x="620" y="230" width="150" height="100" rx="8" fill="#F3E5F5" stroke="#9C27B0" stroke-width="2"/>
+  <text x="695" y="260" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#7B1FA2" text-anchor="middle">4. Cross-Attention</text>
+  <text x="695" y="285" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Attend centroids</text>
+  <text x="695" y="305" font-family="Courier New, monospace" font-size="9" fill="#666" text-anchor="middle">Q @ C^T</text>
+  <text x="695" y="320" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">(n×c) not (n×n)!</text>
+  
+  <!-- Arrow -->
+  <line x1="775" y1="280" x2="805" y2="280" stroke="#666" stroke-width="2"/>
+  <polygon points="800,275 810,280 800,285" fill="#666"/>
+  
+  <!-- Step 5: Output -->
+  <rect x="810" y="230" width="90" height="100" rx="8" fill="#FFECB3" stroke="#FFC107" stroke-width="2"/>
+  <text x="855" y="270" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#F57F17" text-anchor="middle">5. Output</text>
+  <text x="855" y="295" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Aggregate</text>
+  
+  <!-- Math Section -->
+  <rect x="30" y="390" width="890" height="140" rx="10" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="475" y="420" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">Clustering Attention Math</text>
+  
+  <text x="50" y="460" font-family="Courier New, monospace" font-size="12" fill="#333">1. Compute cluster assignments: z_i = argmin_c ||x_i - μ_c||²</text>
+  <text x="50" y="490" font-family="Courier New, monospace" font-size="12" fill="#333">2. Compute centroids: μ_c = (1/|C_c|) Σ_{i∈C_c} x_i</text>
+  <text x="50" y="520" font-family="Courier New, monospace" font-size="12" fill="#333">3. Cross-attention: O = softmax(Q·M^T/√d)·M where M = [μ_1, ..., μ_c]</text>
+</svg>

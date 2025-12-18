@@ -1,0 +1,94 @@
+<svg width="1000" height="750" viewBox="0 0 1000 750" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="1000" height="60" fill="#673AB7"/>
+  <text x="500" y="38" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="white" text-anchor="middle">2018: BERT vs GPT - Divergent Architectures</text>
+  
+  <!-- BERT Section -->
+  <rect x="30" y="80" width="450" height="580" rx="15" fill="#E8F5E9" stroke="#4CAF50" stroke-width="3"/>
+  <text x="255" y="115" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#2E7D32" text-anchor="middle">BERT (Google)</text>
+  <text x="255" y="140" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">Encoder-Only | Bidirectional | 340M params</text>
+  
+  <!-- BERT Block -->
+  <rect x="80" y="160" width="300" height="380" rx="12" fill="white" stroke="#4CAF50" stroke-width="2"/>
+  <text x="230" y="190" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2E7D32" text-anchor="middle">BERT Block (x12)</text>
+  
+  <!-- BERT Input -->
+  <rect x="130" y="480" width="200" height="40" rx="8" fill="#C8E6C9"/>
+  <text x="230" y="505" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32" text-anchor="middle">Input + Position + Segment</text>
+  
+  <!-- BERT Self-Attention -->
+  <rect x="130" y="380" width="200" height="55" rx="10" fill="#4CAF50"/>
+  <text x="230" y="400" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Bidirectional</text>
+  <text x="230" y="420" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Self-Attention</text>
+  
+  <!-- BERT Add & Norm 1 -->
+  <rect x="130" y="320" width="200" height="35" rx="8" fill="#FFE082"/>
+  <text x="230" y="343" font-family="Arial, sans-serif" font-size="11" fill="#F57F17" text-anchor="middle">Add &amp; LayerNorm</text>
+  
+  <!-- BERT FFN -->
+  <rect x="130" y="250" width="200" height="45" rx="10" fill="#9C27B0"/>
+  <text x="230" y="270" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Feed-Forward</text>
+  <text x="230" y="288" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">GELU(xW1)W2</text>
+  
+  <!-- BERT Add & Norm 2 -->
+  <rect x="130" y="200" width="200" height="35" rx="8" fill="#FFE082"/>
+  <text x="230" y="223" font-family="Arial, sans-serif" font-size="11" fill="#F57F17" text-anchor="middle">Add &amp; LayerNorm</text>
+  
+  <!-- BERT Attention Pattern -->
+  <rect x="80" y="550" width="300" height="90" rx="8" fill="#F1F8E9"/>
+  <text x="230" y="575" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32" text-anchor="middle">Attention Pattern</text>
+  <text x="230" y="595" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Every token sees ALL other tokens</text>
+  <text x="230" y="625" font-family="Arial, sans-serif" font-size="14" fill="#4CAF50" text-anchor="middle">[CLS] The cat [MASK] sat</text>
+  
+  <!-- GPT Section -->
+  <rect x="520" y="80" width="450" height="580" rx="15" fill="#E3F2FD" stroke="#2196F3" stroke-width="3"/>
+  <text x="745" y="115" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1565C0" text-anchor="middle">GPT (OpenAI)</text>
+  <text x="745" y="140" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">Decoder-Only | Autoregressive | 117M params</text>
+  
+  <!-- GPT Block -->
+  <rect x="570" y="160" width="300" height="380" rx="12" fill="white" stroke="#2196F3" stroke-width="2"/>
+  <text x="720" y="190" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565C0" text-anchor="middle">GPT Block (x12)</text>
+  
+  <!-- GPT Input -->
+  <rect x="620" y="480" width="200" height="40" rx="8" fill="#BBDEFB"/>
+  <text x="720" y="505" font-family="Arial, sans-serif" font-size="12" fill="#1565C0" text-anchor="middle">Input + Learned Position</text>
+  
+  <!-- GPT Masked Self-Attention -->
+  <rect x="620" y="380" width="200" height="55" rx="10" fill="#2196F3"/>
+  <text x="720" y="400" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Masked (Causal)</text>
+  <text x="720" y="420" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Self-Attention</text>
+  
+  <!-- GPT Add & Norm 1 -->
+  <rect x="620" y="320" width="200" height="35" rx="8" fill="#FFE082"/>
+  <text x="720" y="343" font-family="Arial, sans-serif" font-size="11" fill="#F57F17" text-anchor="middle">Add &amp; LayerNorm</text>
+  
+  <!-- GPT FFN -->
+  <rect x="620" y="250" width="200" height="45" rx="10" fill="#9C27B0"/>
+  <text x="720" y="270" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Feed-Forward</text>
+  <text x="720" y="288" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">GELU(xW1)W2</text>
+  
+  <!-- GPT Add & Norm 2 -->
+  <rect x="620" y="200" width="200" height="35" rx="8" fill="#FFE082"/>
+  <text x="720" y="223" font-family="Arial, sans-serif" font-size="11" fill="#F57F17" text-anchor="middle">Add &amp; LayerNorm</text>
+  
+  <!-- GPT Attention Pattern -->
+  <rect x="570" y="550" width="300" height="90" rx="8" fill="#E3F2FD"/>
+  <text x="720" y="575" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565C0" text-anchor="middle">Attention Pattern</text>
+  <text x="720" y="595" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Each token sees only PAST tokens</text>
+  <text x="720" y="625" font-family="Arial, sans-serif" font-size="14" fill="#2196F3" text-anchor="middle">The -&gt; cat -&gt; sat -&gt; on</text>
+  
+  <!-- Comparison Table -->
+  <rect x="50" y="680" width="900" height="60" rx="10" fill="#FFF8E1" stroke="#FFC107" stroke-width="2"/>
+  <text x="200" y="705" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333" text-anchor="middle">BERT</text>
+  <text x="200" y="725" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">MLM + NSP | Understanding | Classification</text>
+  
+  <line x1="350" y1="685" x2="350" y2="735" stroke="#E0E0E0" stroke-width="2"/>
+  
+  <text x="500" y="705" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333" text-anchor="middle">Key Difference</text>
+  <text x="500" y="725" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">GELU replaces ReLU | Learned vs Sinusoidal Pos</text>
+  
+  <line x1="650" y1="685" x2="650" y2="735" stroke="#E0E0E0" stroke-width="2"/>
+  
+  <text x="800" y="705" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333" text-anchor="middle">GPT</text>
+  <text x="800" y="725" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Autoregressive LM | Generation | No Encoder</text>
+</svg>

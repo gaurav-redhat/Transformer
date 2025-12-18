@@ -1,0 +1,93 @@
+<svg width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="900" height="50" fill="#673AB7"/>
+  <text x="450" y="33" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">Mixture of Experts (MoE): Efficient Scaling</text>
+  
+  <!-- Problem -->
+  <rect x="30" y="70" width="400" height="100" rx="10" fill="#FFEBEE" stroke="#F44336" stroke-width="2"/>
+  <text x="230" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#C62828" text-anchor="middle">Problem: Dense Models Don't Scale</text>
+  <text x="50" y="130" font-family="Arial, sans-serif" font-size="11" fill="#333">175B params = 175B FLOPs per token</text>
+  <text x="50" y="150" font-family="Arial, sans-serif" font-size="11" fill="#333">More params = More compute = Slower!</text>
+  
+  <!-- Solution -->
+  <rect x="470" y="70" width="400" height="100" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="670" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2E7D32" text-anchor="middle">Solution: Sparse Activation</text>
+  <text x="490" y="130" font-family="Arial, sans-serif" font-size="11" fill="#333">1T params but only use 100B per token!</text>
+  <text x="490" y="150" font-family="Arial, sans-serif" font-size="11" fill="#333">Route each token to top-k experts</text>
+  
+  <!-- MoE Architecture -->
+  <rect x="150" y="190" width="600" height="350" rx="10" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="450" y="220" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">MoE Layer Architecture</text>
+  
+  <!-- Input -->
+  <rect x="180" y="250" width="100" height="40" rx="5" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+  <text x="230" y="275" font-family="Arial, sans-serif" font-size="12" fill="#1565C0" text-anchor="middle">Token</text>
+  
+  <!-- Router -->
+  <rect x="320" y="240" width="120" height="60" rx="8" fill="#FCE4EC" stroke="#E91E63" stroke-width="2"/>
+  <text x="380" y="265" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#C2185B" text-anchor="middle">Router</text>
+  <text x="380" y="285" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">Softmax(xW_r)</text>
+  
+  <!-- Arrow from input to router -->
+  <line x1="285" y1="270" x2="315" y2="270" stroke="#666" stroke-width="2"/>
+  <polygon points="310,265 320,270 310,275" fill="#666"/>
+  
+  <!-- Expert boxes -->
+  <rect x="200" y="350" width="80" height="60" rx="8" fill="#9C27B0"/>
+  <text x="240" y="375" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Expert 1</text>
+  <text x="240" y="395" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">FFN</text>
+  
+  <rect x="300" y="350" width="80" height="60" rx="8" fill="#9C27B0"/>
+  <text x="340" y="375" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Expert 2</text>
+  <text x="340" y="395" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">FFN</text>
+  
+  <rect x="400" y="350" width="80" height="60" rx="8" fill="#E0E0E0"/>
+  <text x="440" y="380" font-family="Arial, sans-serif" font-size="14" fill="#666" text-anchor="middle">...</text>
+  
+  <rect x="500" y="350" width="80" height="60" rx="8" fill="#E0E0E0"/>
+  <text x="540" y="375" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">Expert 7</text>
+  <text x="540" y="395" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">inactive</text>
+  
+  <rect x="600" y="350" width="80" height="60" rx="8" fill="#9C27B0"/>
+  <text x="640" y="375" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Expert 8</text>
+  <text x="640" y="395" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">FFN</text>
+  
+  <!-- Router outputs (arrows to experts) -->
+  <line x1="340" y1="305" x2="240" y2="345" stroke="#4CAF50" stroke-width="3"/>
+  <text x="275" y="315" font-family="Arial, sans-serif" font-size="9" fill="#4CAF50">0.6</text>
+  
+  <line x1="380" y1="305" x2="340" y2="345" stroke="#4CAF50" stroke-width="2"/>
+  <text x="350" y="315" font-family="Arial, sans-serif" font-size="9" fill="#4CAF50">0.3</text>
+  
+  <line x1="420" y1="305" x2="640" y2="345" stroke="#BDBDBD" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="550" y="315" font-family="Arial, sans-serif" font-size="9" fill="#999">0.1</text>
+  
+  <!-- Weighted sum -->
+  <rect x="380" y="450" width="120" height="50" rx="8" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <text x="440" y="472" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#E65100" text-anchor="middle">Weighted Sum</text>
+  <text x="440" y="490" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">Sum(w_i * E_i(x))</text>
+  
+  <!-- Arrows from experts to sum -->
+  <line x1="240" y1="415" x2="400" y2="448" stroke="#9C27B0" stroke-width="2"/>
+  <line x1="340" y1="415" x2="420" y2="448" stroke="#9C27B0" stroke-width="2"/>
+  
+  <!-- Output -->
+  <rect x="380" y="520" width="120" height="35" rx="5" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="440" y="543" font-family="Arial, sans-serif" font-size="12" fill="#2E7D32" text-anchor="middle">Output</text>
+  
+  <line x1="440" y1="505" x2="440" y2="515" stroke="#666" stroke-width="2"/>
+  
+  <!-- Stats -->
+  <rect x="550" y="440" width="180" height="90" rx="8" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+  <text x="640" y="465" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1565C0" text-anchor="middle">Mixtral 8x7B</text>
+  <text x="560" y="490" font-family="Arial, sans-serif" font-size="10" fill="#333">Total: 46.7B params</text>
+  <text x="560" y="510" font-family="Arial, sans-serif" font-size="10" fill="#333">Active: 12.9B params</text>
+  <text x="560" y="525" font-family="Arial, sans-serif" font-size="9" fill="#666">Top-2 of 8 experts</text>
+  
+  <!-- Key benefits -->
+  <rect x="170" y="440" width="180" height="90" rx="8" fill="#FCE4EC" stroke="#E91E63" stroke-width="2"/>
+  <text x="260" y="465" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#C2185B" text-anchor="middle">Key Benefits</text>
+  <text x="180" y="490" font-family="Arial, sans-serif" font-size="10" fill="#333">- Train huge models</text>
+  <text x="180" y="510" font-family="Arial, sans-serif" font-size="10" fill="#333">- Same inference cost</text>
+  <text x="180" y="525" font-family="Arial, sans-serif" font-size="10" fill="#333">- Experts specialize</text>
+</svg>

@@ -1,0 +1,98 @@
+<svg width="950" height="650" viewBox="0 0 950 650" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="950" height="50" fill="#2196F3"/>
+  <text x="475" y="33" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">Sparse Attention Patterns</text>
+  
+  <!-- Full Attention -->
+  <rect x="30" y="70" width="200" height="240" rx="10" fill="#FFEBEE" stroke="#F44336" stroke-width="2"/>
+  <text x="130" y="95" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#C62828" text-anchor="middle">Full Attention</text>
+  <text x="130" y="115" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">O(n²)</text>
+  
+  <!-- Full attention matrix -->
+  <rect x="55" y="130" width="150" height="150" fill="#EF5350"/>
+  <text x="130" y="210" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">All-to-all</text>
+  
+  <!-- Sliding Window -->
+  <rect x="250" y="70" width="200" height="240" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="350" y="95" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32" text-anchor="middle">Sliding Window</text>
+  <text x="350" y="115" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">O(n × w)</text>
+  
+  <!-- Sliding window matrix -->
+  <rect x="275" y="130" width="150" height="150" fill="#E0E0E0"/>
+  <!-- Diagonal band -->
+  <polygon points="275,130 305,130 425,250 425,280 395,280 275,160" fill="#4CAF50"/>
+  <text x="350" y="210" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Local only</text>
+  
+  <!-- Global + Local (Longformer) -->
+  <rect x="470" y="70" width="200" height="240" rx="10" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+  <text x="570" y="95" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565C0" text-anchor="middle">Global + Local</text>
+  <text x="570" y="115" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Longformer</text>
+  
+  <!-- Matrix with global tokens -->
+  <rect x="495" y="130" width="150" height="150" fill="#E0E0E0"/>
+  <!-- Local band -->
+  <polygon points="495,130 525,130 645,250 645,280 615,280 495,160" fill="#64B5F6"/>
+  <!-- Global rows/columns -->
+  <rect x="495" y="130" width="150" height="15" fill="#1565C0"/>
+  <rect x="495" y="130" width="15" height="150" fill="#1565C0"/>
+  <text x="570" y="210" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Global tokens</text>
+  
+  <!-- BigBird -->
+  <rect x="690" y="70" width="230" height="240" rx="10" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <text x="805" y="95" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#E65100" text-anchor="middle">BigBird</text>
+  <text x="805" y="115" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Global + Local + Random</text>
+  
+  <!-- BigBird matrix -->
+  <rect x="715" y="130" width="150" height="150" fill="#E0E0E0"/>
+  <!-- Local band -->
+  <polygon points="715,130 745,130 865,250 865,280 835,280 715,160" fill="#FFB74D"/>
+  <!-- Global -->
+  <rect x="715" y="130" width="150" height="12" fill="#FF9800"/>
+  <rect x="715" y="130" width="12" height="150" fill="#FF9800"/>
+  <!-- Random dots -->
+  <circle cx="750" cy="200" r="5" fill="#E65100"/>
+  <circle cx="800" cy="170" r="5" fill="#E65100"/>
+  <circle cx="830" cy="220" r="5" fill="#E65100"/>
+  <circle cx="770" cy="250" r="5" fill="#E65100"/>
+  <text x="805" y="295" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">+ Random connections</text>
+  
+  <!-- Math formulas section -->
+  <rect x="30" y="330" width="890" height="300" rx="10" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="475" y="360" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">Sparse Attention Math</text>
+  
+  <!-- Sliding Window Math -->
+  <rect x="50" y="385" width="400" height="100" rx="8" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="250" y="410" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32" text-anchor="middle">Sliding Window Attention</text>
+  
+  <text x="70" y="440" font-family="Courier New, monospace" font-size="11" fill="#333">A_ij = softmax(Q_i K_j^T / √d) if |i-j| ≤ w/2</text>
+  <text x="70" y="465" font-family="Courier New, monospace" font-size="11" fill="#333">      = 0                       otherwise</text>
+  
+  <!-- Complexity box -->
+  <rect x="50" y="500" width="180" height="60" rx="5" fill="#C8E6C9"/>
+  <text x="140" y="525" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2E7D32" text-anchor="middle">Complexity</text>
+  <text x="140" y="545" font-family="Courier New, monospace" font-size="10" fill="#333" text-anchor="middle">Time: O(n × w × d)</text>
+  
+  <rect x="250" y="500" width="180" height="60" rx="5" fill="#C8E6C9"/>
+  <text x="340" y="525" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2E7D32" text-anchor="middle">Parameters</text>
+  <text x="340" y="545" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">w = 4096 (Mistral)</text>
+  
+  <!-- Longformer Math -->
+  <rect x="490" y="385" width="410" height="100" rx="8" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+  <text x="695" y="410" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565C0" text-anchor="middle">Longformer/BigBird Pattern</text>
+  
+  <text x="510" y="440" font-family="Courier New, monospace" font-size="11" fill="#333">Mask = Local(w) ∪ Global(g) ∪ Random(r)</text>
+  <text x="510" y="465" font-family="Courier New, monospace" font-size="11" fill="#333">A_ij = softmax(Q_i K_j^T / √d) × Mask_ij</text>
+  
+  <!-- Parameters -->
+  <rect x="490" y="500" width="200" height="60" rx="5" fill="#BBDEFB"/>
+  <text x="590" y="525" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1565C0" text-anchor="middle">Complexity</text>
+  <text x="590" y="545" font-family="Courier New, monospace" font-size="10" fill="#333" text-anchor="middle">O(n(w + g + r))</text>
+  
+  <rect x="700" y="500" width="180" height="60" rx="5" fill="#BBDEFB"/>
+  <text x="790" y="525" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1565C0" text-anchor="middle">Typical Values</text>
+  <text x="790" y="545" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">w=256, g=2, r=3</text>
+  
+  <!-- Key insight -->
+  <rect x="50" y="580" width="850" height="35" rx="5" fill="#FFF8E1"/>
+  <text x="475" y="603" font-family="Arial, sans-serif" font-size="11" fill="#F57F17" text-anchor="middle">Key Insight: Information flows through multiple layers! Local attention at each layer → global receptive field after L layers</text>
+</svg>

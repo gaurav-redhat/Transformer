@@ -1,0 +1,121 @@
+<svg width="950" height="700" viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="950" height="55" fill="#1565C0"/>
+  <text x="475" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">Complete Transformer Optimization Guide</text>
+  
+  <!-- Categories -->
+  
+  <!-- Training Optimizations -->
+  <rect x="30" y="75" width="280" height="280" rx="12" fill="#E3F2FD" stroke="#2196F3" stroke-width="3"/>
+  <text x="170" y="105" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1565C0" text-anchor="middle">Training Optimizations</text>
+  
+  <rect x="50" y="125" width="240" height="50" rx="6" fill="#BBDEFB"/>
+  <text x="170" y="145" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1565C0" text-anchor="middle">Mixed Precision (FP16/BF16)</text>
+  <text x="170" y="165" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">2x faster, half memory</text>
+  
+  <rect x="50" y="185" width="240" height="50" rx="6" fill="#90CAF9"/>
+  <text x="170" y="205" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1565C0" text-anchor="middle">Gradient Checkpointing</text>
+  <text x="170" y="225" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">Trade compute for memory</text>
+  
+  <rect x="50" y="245" width="240" height="50" rx="6" fill="#64B5F6"/>
+  <text x="170" y="265" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">ZeRO (DeepSpeed)</text>
+  <text x="170" y="285" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Distribute optimizer states</text>
+  
+  <rect x="50" y="305" width="240" height="35" rx="6" fill="#42A5F5"/>
+  <text x="170" y="328" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">FSDP (PyTorch)</text>
+  
+  <!-- Memory Optimizations -->
+  <rect x="335" y="75" width="280" height="280" rx="12" fill="#E8F5E9" stroke="#4CAF50" stroke-width="3"/>
+  <text x="475" y="105" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2E7D32" text-anchor="middle">Memory Optimizations</text>
+  
+  <rect x="355" y="125" width="240" height="50" rx="6" fill="#C8E6C9"/>
+  <text x="475" y="145" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2E7D32" text-anchor="middle">Flash Attention</text>
+  <text x="475" y="165" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">O(n) memory, IO-aware</text>
+  
+  <rect x="355" y="185" width="240" height="50" rx="6" fill="#A5D6A7"/>
+  <text x="475" y="205" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2E7D32" text-anchor="middle">KV Cache</text>
+  <text x="475" y="225" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">Don't recompute past K,V</text>
+  
+  <rect x="355" y="245" width="240" height="50" rx="6" fill="#81C784"/>
+  <text x="475" y="265" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">PagedAttention (vLLM)</text>
+  <text x="475" y="285" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Virtual memory for KV cache</text>
+  
+  <rect x="355" y="305" width="240" height="35" rx="6" fill="#66BB6A"/>
+  <text x="475" y="328" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Ring Attention (1M+ context)</text>
+  
+  <!-- Inference Optimizations -->
+  <rect x="640" y="75" width="280" height="280" rx="12" fill="#FFF3E0" stroke="#FF9800" stroke-width="3"/>
+  <text x="780" y="105" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#E65100" text-anchor="middle">Inference Optimizations</text>
+  
+  <rect x="660" y="125" width="240" height="50" rx="6" fill="#FFE0B2"/>
+  <text x="780" y="145" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#E65100" text-anchor="middle">Quantization (INT8/INT4)</text>
+  <text x="780" y="165" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">4-8x smaller, faster</text>
+  
+  <rect x="660" y="185" width="240" height="50" rx="6" fill="#FFCC80"/>
+  <text x="780" y="205" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#E65100" text-anchor="middle">Speculative Decoding</text>
+  <text x="780" y="225" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">2-3x faster generation</text>
+  
+  <rect x="660" y="245" width="240" height="50" rx="6" fill="#FFB74D"/>
+  <text x="780" y="265" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Continuous Batching</text>
+  <text x="780" y="285" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">Higher throughput</text>
+  
+  <rect x="660" y="305" width="240" height="35" rx="6" fill="#FFA726"/>
+  <text x="780" y="328" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Tensor Parallelism</text>
+  
+  <!-- Architecture Optimizations -->
+  <rect x="30" y="375" width="280" height="200" rx="12" fill="#F3E5F5" stroke="#9C27B0" stroke-width="3"/>
+  <text x="170" y="405" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#7B1FA2" text-anchor="middle">Architecture Optimizations</text>
+  
+  <rect x="50" y="425" width="240" height="45" rx="6" fill="#E1BEE7"/>
+  <text x="170" y="452" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#7B1FA2" text-anchor="middle">GQA (Grouped Query Attention)</text>
+  
+  <rect x="50" y="480" width="240" height="45" rx="6" fill="#CE93D8"/>
+  <text x="170" y="507" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">RMSNorm (vs LayerNorm)</text>
+  
+  <rect x="50" y="535" width="115" height="30" rx="5" fill="#AB47BC"/>
+  <text x="107" y="555" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">SwiGLU</text>
+  
+  <rect x="175" y="535" width="115" height="30" rx="5" fill="#AB47BC"/>
+  <text x="232" y="555" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">RoPE</text>
+  
+  <!-- Model Compression -->
+  <rect x="335" y="375" width="280" height="200" rx="12" fill="#FCE4EC" stroke="#E91E63" stroke-width="3"/>
+  <text x="475" y="405" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#C2185B" text-anchor="middle">Model Compression</text>
+  
+  <rect x="355" y="425" width="240" height="45" rx="6" fill="#F8BBD9"/>
+  <text x="475" y="452" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#C2185B" text-anchor="middle">Pruning (Structured/Unstructured)</text>
+  
+  <rect x="355" y="480" width="240" height="45" rx="6" fill="#F48FB1"/>
+  <text x="475" y="507" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Knowledge Distillation</text>
+  
+  <rect x="355" y="535" width="115" height="30" rx="5" fill="#EC407A"/>
+  <text x="412" y="555" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">LoRA</text>
+  
+  <rect x="480" y="535" width="115" height="30" rx="5" fill="#EC407A"/>
+  <text x="537" y="555" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">QLoRA</text>
+  
+  <!-- Hardware Optimizations -->
+  <rect x="640" y="375" width="280" height="200" rx="12" fill="#E0F7FA" stroke="#00BCD4" stroke-width="3"/>
+  <text x="780" y="405" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00838F" text-anchor="middle">Hardware/System</text>
+  
+  <rect x="660" y="425" width="240" height="45" rx="6" fill="#B2EBF2"/>
+  <text x="780" y="452" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#00838F" text-anchor="middle">Kernel Fusion (cuDNN, Triton)</text>
+  
+  <rect x="660" y="480" width="240" height="45" rx="6" fill="#80DEEA"/>
+  <text x="780" y="507" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#00838F" text-anchor="middle">Model Parallelism (TP/PP)</text>
+  
+  <rect x="660" y="535" width="115" height="30" rx="5" fill="#26C6DA"/>
+  <text x="717" y="555" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">TensorRT</text>
+  
+  <rect x="785" y="535" width="115" height="30" rx="5" fill="#26C6DA"/>
+  <text x="842" y="555" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">ONNX</text>
+  
+  <!-- Summary Table -->
+  <rect x="30" y="595" width="890" height="90" rx="10" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="475" y="620" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Quick Reference: When to Use What</text>
+  
+  <text x="60" y="650" font-family="Arial, sans-serif" font-size="10" fill="#333">Training large models: Mixed Precision + ZeRO + Gradient Checkpointing + Flash Attention</text>
+  <text x="60" y="670" font-family="Arial, sans-serif" font-size="10" fill="#333">Fast inference: Quantization (INT4) + KV Cache + Speculative Decoding + Continuous Batching</text>
+  <text x="550" y="650" font-family="Arial, sans-serif" font-size="10" fill="#333">Limited memory: Flash Attention + PagedAttention + Quantization</text>
+  <text x="550" y="670" font-family="Arial, sans-serif" font-size="10" fill="#333">Fine-tuning: LoRA/QLoRA + Mixed Precision</text>
+</svg>

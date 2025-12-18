@@ -1,0 +1,81 @@
+<svg width="900" height="550" viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <rect x="0" y="0" width="900" height="50" fill="#9C27B0"/>
+  <text x="450" y="33" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">KV Cache: Efficient Autoregressive Generation</text>
+  
+  <!-- Problem -->
+  <rect x="30" y="70" width="400" height="200" rx="10" fill="#FFEBEE" stroke="#F44336" stroke-width="2"/>
+  <text x="230" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#C62828" text-anchor="middle">Without KV Cache (Slow)</text>
+  
+  <text x="50" y="135" font-family="Arial, sans-serif" font-size="11" fill="#333">Step 1: "The" → compute K,V for [The]</text>
+  <text x="50" y="160" font-family="Arial, sans-serif" font-size="11" fill="#333">Step 2: "cat" → recompute K,V for [The, cat]</text>
+  <text x="50" y="185" font-family="Arial, sans-serif" font-size="11" fill="#333">Step 3: "sat" → recompute K,V for [The, cat, sat]</text>
+  <text x="50" y="210" font-family="Arial, sans-serif" font-size="11" fill="#333">...</text>
+  <text x="50" y="235" font-family="Arial, sans-serif" font-size="11" fill="#C62828">Step n: Recompute ALL n tokens!</text>
+  <text x="50" y="260" font-family="Arial, sans-serif" font-size="10" fill="#C62828">Complexity: O(n²) per token → O(n³) total!</text>
+  
+  <!-- Solution -->
+  <rect x="470" y="70" width="400" height="200" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="670" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2E7D32" text-anchor="middle">With KV Cache (Fast)</text>
+  
+  <text x="490" y="135" font-family="Arial, sans-serif" font-size="11" fill="#333">Step 1: "The" → compute K,V, store in cache</text>
+  <text x="490" y="160" font-family="Arial, sans-serif" font-size="11" fill="#333">Step 2: "cat" → compute K,V for [cat] only</text>
+  <text x="490" y="185" font-family="Arial, sans-serif" font-size="11" fill="#333">Step 3: "sat" → compute K,V for [sat] only</text>
+  <text x="490" y="210" font-family="Arial, sans-serif" font-size="11" fill="#333">...</text>
+  <text x="490" y="235" font-family="Arial, sans-serif" font-size="11" fill="#2E7D32">Step n: Only compute for NEW token!</text>
+  <text x="490" y="260" font-family="Arial, sans-serif" font-size="10" fill="#2E7D32">Complexity: O(n) per token → O(n²) total!</text>
+  
+  <!-- KV Cache visualization -->
+  <rect x="30" y="290" width="840" height="240" rx="10" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="450" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">KV Cache Mechanism</text>
+  
+  <!-- Cache boxes -->
+  <rect x="60" y="350" width="180" height="150" rx="8" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+  <text x="150" y="375" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565C0" text-anchor="middle">K Cache</text>
+  
+  <rect x="80" y="390" width="140" height="25" fill="#BBDEFB"/>
+  <text x="150" y="407" font-family="Arial, sans-serif" font-size="10" fill="#1565C0" text-anchor="middle">K["The"]</text>
+  
+  <rect x="80" y="420" width="140" height="25" fill="#90CAF9"/>
+  <text x="150" y="437" font-family="Arial, sans-serif" font-size="10" fill="#1565C0" text-anchor="middle">K["cat"]</text>
+  
+  <rect x="80" y="450" width="140" height="25" fill="#64B5F6"/>
+  <text x="150" y="467" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">K["sat"]</text>
+  
+  <rect x="80" y="480" width="140" height="15" fill="#42A5F5"/>
+  <text x="150" y="492" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">+ new token K</text>
+  
+  <!-- V Cache -->
+  <rect x="270" y="350" width="180" height="150" rx="8" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="360" y="375" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32" text-anchor="middle">V Cache</text>
+  
+  <rect x="290" y="390" width="140" height="25" fill="#C8E6C9"/>
+  <text x="360" y="407" font-family="Arial, sans-serif" font-size="10" fill="#2E7D32" text-anchor="middle">V["The"]</text>
+  
+  <rect x="290" y="420" width="140" height="25" fill="#A5D6A7"/>
+  <text x="360" y="437" font-family="Arial, sans-serif" font-size="10" fill="#2E7D32" text-anchor="middle">V["cat"]</text>
+  
+  <rect x="290" y="450" width="140" height="25" fill="#81C784"/>
+  <text x="360" y="467" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">V["sat"]</text>
+  
+  <rect x="290" y="480" width="140" height="15" fill="#66BB6A"/>
+  <text x="360" y="492" font-family="Arial, sans-serif" font-size="9" fill="white" text-anchor="middle">+ new token V</text>
+  
+  <!-- New Query -->
+  <rect x="490" y="400" width="120" height="60" rx="8" fill="#FCE4EC" stroke="#E91E63" stroke-width="2"/>
+  <text x="550" y="425" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#C2185B" text-anchor="middle">New Q</text>
+  <text x="550" y="445" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Q["on"]</text>
+  
+  <!-- Attention computation -->
+  <rect x="650" y="380" width="200" height="100" rx="8" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+  <text x="750" y="410" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#E65100" text-anchor="middle">Attention</text>
+  <text x="750" y="435" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Q_new @ K_cache^T</text>
+  <text x="750" y="455" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">→ softmax → @ V_cache</text>
+  <text x="750" y="475" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">Only 1×n instead of n×n!</text>
+  
+  <!-- Arrows -->
+  <line x1="255" y1="425" x2="485" y2="425" stroke="#666" stroke-width="2"/>
+  <line x1="455" y1="425" x2="485" y2="425" stroke="#666" stroke-width="2"/>
+  <line x1="615" y1="430" x2="645" y2="430" stroke="#666" stroke-width="2"/>
+  <polygon points="640,425 650,430 640,435" fill="#666"/>
+</svg>
