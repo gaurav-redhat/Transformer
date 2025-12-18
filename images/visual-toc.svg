@@ -74,22 +74,30 @@
   <text x="600" y="390" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#F57F17" text-anchor="middle">Kimi Linear</text>
   <text x="600" y="408" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Best of Both Worlds</text>
   
-  <!-- Final -->
+  <!-- Section 12: Resources -->
   <rect x="740" y="340" width="180" height="80" rx="10" fill="#1A237E" stroke="#3F51B5" stroke-width="3"/>
-  <text x="830" y="370" font-family="Arial, sans-serif" font-size="11" fill="#9FA8DA" text-anchor="middle">12. CONCLUSION</text>
+  <text x="830" y="370" font-family="Arial, sans-serif" font-size="11" fill="#9FA8DA" text-anchor="middle">12. RESOURCES</text>
   <text x="830" y="390" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Further Reading</text>
-  <text x="830" y="408" font-family="Arial, sans-serif" font-size="10" fill="#9FA8DA" text-anchor="middle">Papers + Resources</text>
+  <text x="830" y="408" font-family="Arial, sans-serif" font-size="10" fill="#9FA8DA" text-anchor="middle">Papers + Code</text>
   
-  <!-- Arrows -->
-  <polygon points="235,120 250,110 250,130" fill="#2196F3"/>
-  <polygon points="465,120 480,110 480,130" fill="#4CAF50"/>
-  <polygon points="695,120 710,110 710,130" fill="#FF9800"/>
-  <polygon points="830,165 820,180 840,180" fill="#9C27B0"/>
-  <polygon points="735,250 720,240 720,260" fill="#E91E63"/>
-  <polygon points="505,250 490,240 490,260" fill="#00BCD4"/>
-  <polygon points="275,250 260,240 260,260" fill="#795548"/>
-  <polygon points="140,295 130,310 150,310" fill="#F44336"/>
-  <polygon points="235,380 250,370 250,390" fill="#3F51B5"/>
-  <polygon points="465,380 480,370 480,390" fill="#009688"/>
-  <polygon points="695,380 710,370 710,390" fill="#FFC107"/>
+  <!-- Arrows - Row 1: Left to Right (→) -->
+  <polygon points="255,120 240,110 240,130" fill="#2196F3"/>
+  <polygon points="485,120 470,110 470,130" fill="#4CAF50"/>
+  <polygon points="715,120 700,110 700,130" fill="#FF9800"/>
+  
+  <!-- Arrow down from 4 to 5 (↓) -->
+  <polygon points="830,185 820,170 840,170" fill="#9C27B0"/>
+  
+  <!-- Arrows - Row 2: Right to Left (←) -->
+  <polygon points="710,250 725,240 725,260" fill="#E91E63"/>
+  <polygon points="480,250 495,240 495,260" fill="#00BCD4"/>
+  <polygon points="250,250 265,240 265,260" fill="#795548"/>
+  
+  <!-- Arrow down from 8 to 9 (↓) -->
+  <polygon points="140,315 130,300 150,300" fill="#F44336"/>
+  
+  <!-- Arrows - Row 3: Left to Right (→) -->
+  <polygon points="255,380 240,370 240,390" fill="#3F51B5"/>
+  <polygon points="485,380 470,370 470,390" fill="#009688"/>
+  <polygon points="715,380 700,370 700,390" fill="#FFC107"/>
 </svg>

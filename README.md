@@ -3,58 +3,61 @@
 </p>
 
 <p align="center">
-  <a href="#-quick-start"><img src="https://img.shields.io/badge/🚀-Quick_Start-blue?style=for-the-badge" alt="Quick Start"></a>
-  <a href="#-the-problem"><img src="https://img.shields.io/badge/⚠️-Problem-red?style=for-the-badge" alt="Problem"></a>
-  <a href="#-the-solution"><img src="https://img.shields.io/badge/✅-Solution-green?style=for-the-badge" alt="Solution"></a>
-  <a href="#-optimizations"><img src="https://img.shields.io/badge/⚡-Optimizations-orange?style=for-the-badge" alt="Optimizations"></a>
-  <a href="#-2025-sota"><img src="https://img.shields.io/badge/🚀-2025_SOTA-purple?style=for-the-badge" alt="2025 SOTA"></a>
+  <a href="#-quick-start"><img src="https://img.shields.io/badge/🚀_Quick_Start-7C4DFF?style=for-the-badge" alt="Quick Start"></a>
+  <a href="#-the-problem"><img src="https://img.shields.io/badge/⚠️_Problem-F44336?style=for-the-badge" alt="Problem"></a>
+  <a href="#-the-solution"><img src="https://img.shields.io/badge/✅_Solution-4CAF50?style=for-the-badge" alt="Solution"></a>
+  <a href="#-optimizations"><img src="https://img.shields.io/badge/⚡_Optimize-FF9800?style=for-the-badge" alt="Optimizations"></a>
+  <a href="#-2025-sota"><img src="https://img.shields.io/badge/🔬_2025_SOTA-E91E63?style=for-the-badge" alt="2025 SOTA"></a>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Diagrams-41+-00BCD4?style=flat-square&logo=image" alt="Diagrams">
-  <img src="https://img.shields.io/badge/Architectures-20+-4CAF50?style=flat-square&logo=buffer" alt="Architectures">
-  <img src="https://img.shields.io/badge/Math-100%25-FF9800?style=flat-square&logo=mathworks" alt="Math">
-  <img src="https://img.shields.io/badge/Code-PyTorch-EE4C2C?style=flat-square&logo=pytorch" alt="PyTorch">
-  <img src="https://img.shields.io/badge/Years-2017--2025-9C27B0?style=flat-square&logo=calendar" alt="Years">
-</p>
+<br>
 
----
-
-## 📍 Visual Learning Path
+<h2 align="center">📍 Learning Roadmap</h2>
 
 <p align="center">
   <img src="./images/visual-toc.svg" alt="Visual Table of Contents" width="100%">
 </p>
 
 <details>
-<summary><b>📚 Detailed Table of Contents</b></summary>
+<summary align="center"><b>📚 Click to see Detailed Table of Contents</b></summary>
+<br>
 
-1. [🚀 Quick Start](#-quick-start)
-2. [⚠️ The Problem: Why We Needed Transformers](#-the-problem)
-3. [✅ The Solution: Self-Attention](#-the-solution)
-4. [📐 Step-by-Step Math](#-step-by-step-math)
-5. [🔧 Key Components Deep Dive](#-key-components)
-6. [📈 Evolution Timeline: 2017 → 2025](#-evolution-timeline)
-7. [🔄 Architecture Comparisons](#-architecture-comparisons)
-8. [💻 Complete Implementation](#-complete-implementation)
-9. [⚡ Optimizations](#-optimizations)
-10. [📊 Complexity: O(n²) → O(n)](#-complexity-reduction)
-11. [🚀 2025 SOTA: Advanced Attention](#-2025-sota)
-12. [📖 Further Reading](#-further-reading)
+| # | Section | Description |
+|:-:|:--------|:------------|
+| 1 | [🚀 Quick Start](#-quick-start) | Overview and prerequisites |
+| 2 | [⚠️ The Problem](#-the-problem) | Why RNNs failed |
+| 3 | [✅ The Solution](#-the-solution) | Self-attention explained |
+| 4 | [📐 Step-by-Step Math](#-step-by-step-math) | Complete derivations |
+| 5 | [🔧 Key Components](#-key-components) | Multi-head, FFN, LayerNorm |
+| 6 | [📈 Evolution](#-evolution-timeline) | 2017 → 2025 timeline |
+| 7 | [🔄 Comparisons](#-architecture-comparisons) | Side-by-side architectures |
+| 8 | [💻 Implementation](#-complete-implementation) | PyTorch code |
+| 9 | [⚡ Optimizations](#-optimizations) | Flash, KV Cache, Quantization |
+| 10 | [📊 Complexity](#-complexity-reduction) | O(n²) → O(n) methods |
+| 11 | [🔬 2025 SOTA](#-2025-sota) | GLA, Mamba, Kimi Linear |
+| 12 | [📖 Resources](#-further-reading) | Papers & code |
 
 </details>
 
+<br>
+
 ---
 
-## 🚀 Quick Start
+<br>
 
-> **TL;DR**: Transformers replaced RNNs by using **self-attention** - allowing every token to directly connect with every other token in parallel.
+<h2 align="center">🚀 Quick Start</h2>
+
+<p align="center">
+  <b>TL;DR</b>: Transformers replaced RNNs by using <b>self-attention</b> — allowing every token to directly connect with every other token in parallel.
+</p>
+
+<br>
 
 <table>
 <tr>
-<td width="50%">
+<td width="50%" valign="top">
 
-### What You'll Learn
+### 📖 What You'll Learn
 
 | Topic | Coverage |
 |:------|:---------|
@@ -65,177 +68,226 @@
 | 🔬 **2025 Research** | GLA, Mamba, KDA, Kimi Linear |
 
 </td>
-<td width="50%">
+<td width="50%" valign="top">
 
-### Who Is This For?
+### 👥 Who Is This For?
 
-- 🎓 **Students** learning deep learning
-- 👨‍💻 **Engineers** implementing transformers
-- 🔬 **Researchers** exploring new architectures
-- 📊 **ML Practitioners** optimizing models
+| Audience | Benefit |
+|:---------|:--------|
+| 🎓 **Students** | Learn deep learning fundamentals |
+| 👨‍💻 **Engineers** | Implement transformers correctly |
+| 🔬 **Researchers** | Explore new architectures |
+| 📊 **Practitioners** | Optimize production models |
 
-**Prerequisites**: Basic linear algebra & Python
+> **Prerequisites**: Basic linear algebra & Python
 
 </td>
 </tr>
 </table>
 
+<br>
+
 ---
 
-## ⚠️ The Problem
+<br>
 
-> **Before 2017**: RNNs processed sequences one token at a time. This was slow and forgot long-range information.
+<h2 align="center">⚠️ The Problem</h2>
+
+<p align="center">
+  <i>Before 2017: RNNs processed sequences one token at a time — slow and forgetful.</i>
+</p>
+
+<br>
 
 <p align="center">
   <img src="./images/rnn-problem.svg" alt="RNN Problems" width="100%">
 </p>
 
-### Why RNNs Failed for Long Sequences
+<br>
+
+<h3 align="center">Why RNNs Failed</h3>
 
 <table>
 <tr>
 <td width="33%" align="center">
-
-### 🐌 Sequential
-
-```
-Time: O(n)
-Can't parallelize!
-```
-
-Each step waits for previous
-
+<h4>🐌 Sequential</h4>
+<p>Time: <code>O(n)</code><br>Can't parallelize!</p>
+<p><i>Each step waits for previous</i></p>
 </td>
 <td width="33%" align="center">
-
-### 📉 Vanishing Gradients
-
-```
-Step 1:  1.0
-Step 50: 0.00001
-```
-
-Information gets lost
-
+<h4>📉 Vanishing Gradients</h4>
+<p>Step 1: <code>1.0</code><br>Step 50: <code>0.00001</code></p>
+<p><i>Information gets lost</i></p>
 </td>
 <td width="33%" align="center">
-
-### 🔗 Long-Range
-
-```
-Token 1 ←❌→ Token 1000
-```
-
-Hard to connect distant tokens
-
+<h4>🔗 Long-Range</h4>
+<p>Token 1 ↔ Token 1000<br><code>❌ Hard!</code></p>
+<p><i>Distant tokens can't connect</i></p>
 </td>
 </tr>
 </table>
 
-### The Math Problem
+<br>
+
+<details>
+<summary><b>📐 The Math Behind the Problem</b></summary>
+<br>
 
 $$\frac{\partial L}{\partial h_1} = \frac{\partial L}{\partial h_n} \cdot \prod_{t=2}^{n} W_{hh}^T \cdot \text{diag}(\tanh'(z_t))$$
 
-**If** $\|W_{hh}\| < 1$ **→ Gradients vanish exponentially!** After 50+ steps, gradients become nearly zero, making training impossible for long sequences.
+**If** $\|W_{hh}\| < 1$ **→ Gradients vanish exponentially!**
+
+After 50+ steps, gradients become nearly zero, making training impossible.
+
+</details>
+
+<br>
 
 ---
 
-## ✅ The Solution
+<br>
 
-> **The Breakthrough**: Self-attention creates **direct paths** between all tokens. No more sequential bottleneck!
+<h2 align="center">✅ The Solution</h2>
+
+<p align="center">
+  <b>The Breakthrough</b>: Self-attention creates <b>direct paths</b> between ALL tokens!
+</p>
+
+<br>
 
 <p align="center">
   <img src="./images/transformer-solution.svg" alt="Transformer Solution" width="100%">
 </p>
 
-### Self-Attention: Direct Connections
+<br>
+
+<h3 align="center">Self-Attention Mechanism</h3>
 
 <p align="center">
   <img src="./images/attention-mechanism.svg" alt="Attention Mechanism" width="100%">
 </p>
 
-> **Key Insight**: Every token can directly attend to every other token in **O(1)** path length!
+<br>
 
-### The Attention Formula
+<p align="center">
+  <b>Key Insight</b>: Every token can directly attend to every other token in <code>O(1)</code> path length!
+</p>
 
-$$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
+<br>
 
-**How it works**: Each token creates a Query ("what am I looking for?"), Keys ("what do I contain?"), and Values ("what information do I provide?"). Dot products find relevant matches.
+<h3 align="center">The Attention Formula</h3>
+
+<p align="center">
+
+$$\Large \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
+
+</p>
 
 <table>
 <tr>
 <td width="33%" align="center">
-<h4>Query (Q)</h4>
-"What am I looking for?"
+<h4>🔍 Query (Q)</h4>
+<p><i>"What am I looking for?"</i></p>
 </td>
 <td width="33%" align="center">
-<h4>Key (K)</h4>
-"What do I contain?"
+<h4>🔑 Key (K)</h4>
+<p><i>"What do I contain?"</i></p>
 </td>
 <td width="33%" align="center">
-<h4>Value (V)</h4>
-"What do I offer?"
+<h4>💎 Value (V)</h4>
+<p><i>"What do I offer?"</i></p>
 </td>
 </tr>
 </table>
 
+<br>
+
 ---
 
-## 📐 Step-by-Step Math
+<br>
 
-> **Goal**: Transform input tokens into context-aware representations using learned attention weights.
+<h2 align="center">📐 Step-by-Step Math</h2>
+
+<p align="center">
+  <i>Transform input tokens into context-aware representations</i>
+</p>
+
+<br>
 
 <p align="center">
   <img src="./images/attention-math.svg" alt="Attention Math" width="100%">
 </p>
 
-### 1️⃣ Create Q, K, V
+<br>
 
-Project input X through learned weight matrices:
+<table>
+<tr>
+<td width="50%">
+
+### Step 1️⃣ Create Q, K, V
 
 ```python
-Q = X @ W_Q  # (n, d) @ (d, d_k) = (n, d_k)
-K = X @ W_K  # (n, d) @ (d, d_k) = (n, d_k)  
-V = X @ W_V  # (n, d) @ (d, d_v) = (n, d_v)
+Q = X @ W_Q  # (n, d) → (n, d_k)
+K = X @ W_K  # (n, d) → (n, d_k)  
+V = X @ W_V  # (n, d) → (n, d_v)
 ```
 
-### 2️⃣ Compute Attention Scores
-
-Measure similarity between queries and keys. Scale by √d_k for stable gradients:
+### Step 2️⃣ Compute Scores
 
 $$\text{scores} = \frac{QK^T}{\sqrt{d_k}}$$
 
-### 3️⃣ Apply Softmax
+</td>
+<td width="50%">
 
-Convert scores to probabilities (weights sum to 1):
+### Step 3️⃣ Apply Softmax
 
 $$\text{weights} = \text{softmax}(\text{scores})$$
 
-### 4️⃣ Weighted Sum
+*Convert to probabilities (sum = 1)*
 
-Aggregate values based on attention weights:
+### Step 4️⃣ Weighted Sum
 
 $$\text{output} = \text{weights} \cdot V$$
 
+*Aggregate based on attention*
+
+</td>
+</tr>
+</table>
+
+<br>
+
 ---
 
-## 🔧 Key Components
+<br>
 
-### Multi-Head Attention
+<h2 align="center">🔧 Key Components</h2>
 
-> **Why multiple heads?** Each head can learn different types of relationships (syntax, semantics, coreference, etc.)
+<br>
+
+<h3 align="center">Multi-Head Attention</h3>
+
+<p align="center">
+  <i>Multiple attention heads learn different relationships</i>
+</p>
 
 <p align="center">
   <img src="./images/multi-head-attention.svg" alt="Multi-Head Attention" width="100%">
 </p>
 
+<p align="center">
+
 $$\text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, ..., \text{head}_h)W^O$$
 
-**Example**: 8 heads with d=512 → each head has d_k=64. Parallel attention for richer representations.
+</p>
 
-### Positional Encoding
+<br>
 
-> **Problem**: Attention is permutation-invariant. "The cat sat" = "sat cat The" without position info!
+<h3 align="center">Positional Encoding</h3>
+
+<p align="center">
+  <i>Attention is permutation-invariant — we need position info!</i>
+</p>
 
 <p align="center">
   <img src="./images/positional-encoding.svg" alt="Positional Encoding" width="100%">
@@ -243,161 +295,138 @@ $$\text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, ..., \text{head}_h)W^O$
 
 <table>
 <tr>
-<td width="50%">
+<td width="50%" align="center">
 
-#### Sinusoidal (2017)
+**Sinusoidal (2017)**
 
-Fixed encoding using sin/cos waves:
-
-$$PE_{(pos, 2i)} = \sin(pos / 10000^{2i/d})$$
-$$PE_{(pos, 2i+1)} = \cos(pos / 10000^{2i/d})$$
+$$PE_{pos, 2i} = \sin(pos / 10000^{2i/d})$$
 
 </td>
-<td width="50%">
+<td width="50%" align="center">
 
-#### RoPE (2023+)
+**RoPE (2023+)**
 
-Rotary encoding - positions encoded in the attention computation itself:
-
-<p align="center">
-  <img src="./images/rope-position.svg" alt="RoPE" width="100%">
-</p>
+<img src="./images/rope-position.svg" alt="RoPE" width="100%">
 
 </td>
 </tr>
 </table>
 
-### Feed-Forward Network
+<br>
 
-> **Role**: Add non-linearity and increase model capacity. Applied identically to each position.
+<h3 align="center">Feed-Forward & Normalization</h3>
 
-<p align="center">
-  <img src="./images/feed-forward-network.svg" alt="FFN" width="100%">
-</p>
+<table>
+<tr>
+<td width="50%">
+<p align="center"><img src="./images/feed-forward-network.svg" alt="FFN" width="100%"></p>
+</td>
+<td width="50%">
+<p align="center"><img src="./images/layer-norm-math.svg" alt="LayerNorm" width="100%"></p>
+</td>
+</tr>
+</table>
 
-**Formula**: FFN(x) = W₂ · σ(W₁ · x + b₁) + b₂. Typically expands 4× then projects back.
+<br>
 
-### Normalization Evolution
-
-> **Why normalize?** Stabilizes training by controlling activation magnitudes.
-
-<p align="center">
-  <img src="./images/layer-norm-math.svg" alt="LayerNorm vs RMSNorm" width="100%">
-</p>
-
-**LayerNorm (2017)**: Normalizes mean and variance. **RMSNorm (2023+)**: Only normalizes scale - 10-15% faster!
-
-### Activation Functions
-
-> **Evolution**: ReLU → GELU → SwiGLU. Each improves gradient flow and model quality.
+<h3 align="center">Activation Functions</h3>
 
 <p align="center">
   <img src="./images/swiglu-activation.svg" alt="SwiGLU" width="100%">
 </p>
 
-**SwiGLU**: Used in LLaMA, Mistral. Gated activation with smoother gradients than ReLU.
+<br>
 
 ---
 
-## 📈 Evolution Timeline
+<br>
 
-> **8 years of progress**: From 65M params (2017) to 1.8T params (2024), with countless architectural improvements.
+<h2 align="center">📈 Evolution Timeline</h2>
+
+<p align="center">
+  <i>8 years of progress: 65M → 1.8T parameters</i>
+</p>
+
+<br>
 
 <p align="center">
   <img src="./images/transformer-timeline.svg" alt="Transformer Timeline" width="100%">
 </p>
 
-### Year-by-Year Block Diagrams
+<br>
+
+<h3 align="center">Year-by-Year Architecture Changes</h3>
 
 <details>
-<summary><b>🔍 2017: Original Transformer</b></summary>
-
-**Key innovations**: Self-attention, encoder-decoder architecture, sinusoidal positions.
-
-<p align="center">
-  <img src="./images/2017-original-transformer-block.svg" alt="2017 Transformer" width="100%">
-</p>
-
+<summary><b>🟢 2017: Original Transformer</b> — Self-attention, Encoder-Decoder</summary>
+<br>
+<p align="center"><img src="./images/2017-original-transformer-block.svg" alt="2017" width="100%"></p>
 </details>
 
 <details>
-<summary><b>🔍 2018: BERT & GPT</b></summary>
-
-**BERT**: Encoder-only, bidirectional, masked LM. **GPT**: Decoder-only, autoregressive.
-
-<p align="center">
-  <img src="./images/2018-bert-gpt-blocks.svg" alt="2018 BERT GPT" width="100%">
-</p>
-
+<summary><b>🔵 2018: BERT & GPT</b> — Encoder-only vs Decoder-only</summary>
+<br>
+<p align="center"><img src="./images/2018-bert-gpt-blocks.svg" alt="2018" width="100%"></p>
 </details>
 
 <details>
-<summary><b>🔍 2020: GPT-3 & Scaling</b></summary>
-
-**Discovery**: Scaling laws! More params + data = better performance. 175B parameters.
-
-<p align="center">
-  <img src="./images/2020-gpt3-block.svg" alt="2020 GPT-3" width="100%">
-</p>
-
+<summary><b>🟡 2020: GPT-3</b> — Scale is all you need (175B params)</summary>
+<br>
+<p align="center"><img src="./images/2020-gpt3-block.svg" alt="2020" width="100%"></p>
 </details>
 
 <details>
-<summary><b>🔍 2023: LLaMA & Mistral</b></summary>
-
-**Improvements**: RMSNorm, RoPE, SwiGLU, GQA. Efficient at scale.
-
-<p align="center">
-  <img src="./images/2023-llama-mistral-block.svg" alt="2023 LLaMA Mistral" width="100%">
-</p>
-
+<summary><b>🟠 2023: LLaMA & Mistral</b> — RMSNorm, RoPE, SwiGLU, GQA</summary>
+<br>
+<p align="center"><img src="./images/2023-llama-mistral-block.svg" alt="2023" width="100%"></p>
 </details>
 
 <details>
-<summary><b>🔍 2024-2025: Modern Architectures</b></summary>
-
-**Cutting edge**: MoE, MLA, sliding window, linear attention hybrids.
-
-<p align="center">
-  <img src="./images/2024-2025-modern-block.svg" alt="2024-2025 Modern" width="100%">
-</p>
-
+<summary><b>🔴 2024-2025: Modern</b> — MoE, MLA, Linear Attention</summary>
+<br>
+<p align="center"><img src="./images/2024-2025-modern-block.svg" alt="2024-2025" width="100%"></p>
 </details>
+
+<br>
 
 ---
 
-## 🔄 Architecture Comparisons
+<br>
 
-> **Three paradigms**: Encoder-only (BERT), Decoder-only (GPT), Encoder-Decoder (T5).
-
-<p align="center">
-  <img src="./images/all-transformers-comparison.svg" alt="All Transformers Comparison" width="100%">
-</p>
-
-### Encoder vs Decoder
-
-**Encoder**: Bidirectional, sees all tokens. Great for understanding (classification, NER).
-**Decoder**: Causal, sees only past. Great for generation (text, code).
+<h2 align="center">🔄 Architecture Comparisons</h2>
 
 <p align="center">
-  <img src="./images/encoder-decoder.svg" alt="Encoder Decoder" width="100%">
+  <img src="./images/all-transformers-comparison.svg" alt="All Transformers" width="100%">
 </p>
 
-### Mixture of Experts
+<br>
 
-> **MoE**: Route tokens to specialized "expert" networks. Only 2-4 experts active per token = massive model, efficient compute.
+<table>
+<tr>
+<td width="50%">
+<h4 align="center">Encoder vs Decoder</h4>
+<p align="center"><img src="./images/encoder-decoder.svg" alt="Enc-Dec" width="100%"></p>
+</td>
+<td width="50%">
+<h4 align="center">Mixture of Experts</h4>
+<p align="center"><img src="./images/moe-architecture.svg" alt="MoE" width="100%"></p>
+</td>
+</tr>
+</table>
 
-<p align="center">
-  <img src="./images/moe-architecture.svg" alt="MoE Architecture" width="100%">
-</p>
-
-**Example**: Mixtral 8x7B has 47B params but only uses 13B per forward pass!
+<br>
 
 ---
 
-## 💻 Complete Implementation
+<br>
 
-> **Full PyTorch implementation** of multi-head attention in ~30 lines.
+<h2 align="center">💻 Complete Implementation</h2>
+
+<p align="center">
+  <i>Multi-Head Attention in ~30 lines of PyTorch</i>
+</p>
+
+<br>
 
 ```python
 import torch
@@ -408,7 +437,6 @@ import math
 class MultiHeadAttention(nn.Module):
     def __init__(self, d_model, n_heads):
         super().__init__()
-        self.d_model = d_model
         self.n_heads = n_heads
         self.d_k = d_model // n_heads
         
@@ -418,261 +446,260 @@ class MultiHeadAttention(nn.Module):
         self.W_o = nn.Linear(d_model, d_model)
     
     def forward(self, x, mask=None):
-        batch_size, seq_len, _ = x.shape
+        B, N, _ = x.shape
         
-        # Project to Q, K, V
-        Q = self.W_q(x).view(batch_size, seq_len, self.n_heads, self.d_k).transpose(1, 2)
-        K = self.W_k(x).view(batch_size, seq_len, self.n_heads, self.d_k).transpose(1, 2)
-        V = self.W_v(x).view(batch_size, seq_len, self.n_heads, self.d_k).transpose(1, 2)
+        # Project and reshape: (B, N, H, D) -> (B, H, N, D)
+        Q = self.W_q(x).view(B, N, self.n_heads, self.d_k).transpose(1, 2)
+        K = self.W_k(x).view(B, N, self.n_heads, self.d_k).transpose(1, 2)
+        V = self.W_v(x).view(B, N, self.n_heads, self.d_k).transpose(1, 2)
         
         # Scaled dot-product attention
-        scores = torch.matmul(Q, K.transpose(-2, -1)) / math.sqrt(self.d_k)
-        
+        scores = (Q @ K.transpose(-2, -1)) / math.sqrt(self.d_k)
         if mask is not None:
             scores = scores.masked_fill(mask == 0, float('-inf'))
         
-        attn_weights = F.softmax(scores, dim=-1)
-        output = torch.matmul(attn_weights, V)
+        attn = F.softmax(scores, dim=-1)
+        out = (attn @ V).transpose(1, 2).contiguous().view(B, N, -1)
         
-        # Concatenate and project
-        output = output.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
-        return self.W_o(output)
+        return self.W_o(out)
 ```
 
----
-
-## ⚡ Optimizations
-
-> **Problem**: Standard attention is O(n²) in memory. For 32K tokens, that's 1 billion attention values!
-
-<p align="center">
-  <img src="./images/all-optimizations.svg" alt="All Optimizations Overview" width="100%">
-</p>
-
-### Flash Attention
-
-> **Key idea**: Compute attention in tiles that fit in GPU SRAM. Same math, 2-4× faster, O(n) memory!
-
-<p align="center">
-  <img src="./images/flash-attention.svg" alt="Flash Attention" width="100%">
-</p>
-
-### KV Cache
-
-> **For inference**: Cache computed K,V from previous tokens. Avoids recomputation during autoregressive generation.
-
-<p align="center">
-  <img src="./images/kv-cache.svg" alt="KV Cache" width="100%">
-</p>
-
-**Trade-off**: Memory vs speed. 7B model at 4K context ≈ 1GB KV cache!
-
-### Quantization
-
-> **Compress weights**: FP16 → INT8 → INT4. 4× smaller, ~5% quality loss.
-
-<p align="center">
-  <img src="./images/quantization.svg" alt="Quantization" width="100%">
-</p>
-
-### Speculative Decoding
-
-> **Faster generation**: Small "draft" model proposes tokens, large model verifies in parallel. 2-3× speedup!
-
-<p align="center">
-  <img src="./images/speculative-decoding.svg" alt="Speculative Decoding" width="100%">
-</p>
-
-### Gradient Checkpointing
-
-> **Training memory**: Don't store all activations. Recompute during backward pass. Trade compute for memory.
-
-<p align="center">
-  <img src="./images/gradient-checkpointing.svg" alt="Gradient Checkpointing" width="100%">
-</p>
+<br>
 
 ---
 
-## 📊 Complexity Reduction
+<br>
 
-> **The holy grail**: Reduce O(n²) attention to O(n) while maintaining quality.
-
-<p align="center">
-  <img src="./images/attention-complexity-comparison.svg" alt="Attention Complexity" width="100%">
-</p>
-
-### Sparse Attention Patterns
-
-> **Idea**: Don't attend to everything. Use local windows + global tokens.
+<h2 align="center">⚡ Optimizations</h2>
 
 <p align="center">
-  <img src="./images/sparse-attention.svg" alt="Sparse Attention" width="100%">
+  <i>Make transformers faster and more memory-efficient</i>
 </p>
 
-**Sliding Window**: Only attend to nearby tokens (Mistral uses w=4096).
-**Longformer**: Local + global [CLS] tokens.
-
-### Linear / Kernel Attention
-
-> **Key trick**: Reorder matrix multiplication! (QK^T)V → Q(K^TV) changes O(n²) to O(n).
+<br>
 
 <p align="center">
-  <img src="./images/linear-attention.svg" alt="Linear Attention" width="100%">
+  <img src="./images/all-optimizations.svg" alt="All Optimizations" width="100%">
 </p>
 
-$$\text{softmax}(QK^T) \approx \phi(Q)\phi(K)^T$$
+<br>
 
-### Low-Rank Attention (Linformer)
+<table>
+<tr>
+<td width="50%">
+<h4 align="center">⚡ Flash Attention</h4>
+<p align="center"><img src="./images/flash-attention.svg" alt="Flash" width="100%"></p>
+<p align="center"><i>Same math, 2-4× faster, O(n) memory</i></p>
+</td>
+<td width="50%">
+<h4 align="center">💾 KV Cache</h4>
+<p align="center"><img src="./images/kv-cache.svg" alt="KV Cache" width="100%"></p>
+<p align="center"><i>Cache K,V for faster generation</i></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<h4 align="center">📦 Quantization</h4>
+<p align="center"><img src="./images/quantization.svg" alt="Quantization" width="100%"></p>
+<p align="center"><i>FP16 → INT8 → INT4 (4× smaller)</i></p>
+</td>
+<td width="50%">
+<h4 align="center">🚀 Speculative Decoding</h4>
+<p align="center"><img src="./images/speculative-decoding.svg" alt="Speculative" width="100%"></p>
+<p align="center"><i>Draft + verify = 2-3× speedup</i></p>
+</td>
+</tr>
+</table>
 
-> **Insight**: Attention matrix is approximately low-rank. Project to k dimensions where k << n.
-
-<p align="center">
-  <img src="./images/low-rank-attention.svg" alt="Low-Rank Attention" width="100%">
-</p>
-
-### LSH / Hash Attention
-
-> **Reformer**: Use locality-sensitive hashing to find similar tokens. Only attend within hash buckets.
-
-<p align="center">
-  <img src="./images/lsh-attention.svg" alt="LSH Attention" width="100%">
-</p>
-
-### Clustering Attention
-
-> **Group tokens**: Cluster similar tokens, attend to cluster centroids instead of all tokens.
-
-<p align="center">
-  <img src="./images/clustering-attention.svg" alt="Clustering Attention" width="100%">
-</p>
+<br>
 
 ---
 
-## 🚀 2025 SOTA
+<br>
 
-> **Latest research**: Linear attention that matches or beats full attention!
+<h2 align="center">📊 Complexity Reduction</h2>
+
+<p align="center">
+  <b>The Holy Grail</b>: O(n²) → O(n) while maintaining quality
+</p>
+
+<br>
+
+<p align="center">
+  <img src="./images/attention-complexity-comparison.svg" alt="Complexity" width="100%">
+</p>
+
+<br>
+
+<table>
+<tr>
+<td width="50%">
+<h4 align="center">Sparse Attention</h4>
+<p align="center"><img src="./images/sparse-attention.svg" alt="Sparse" width="100%"></p>
+</td>
+<td width="50%">
+<h4 align="center">Linear Attention</h4>
+<p align="center"><img src="./images/linear-attention.svg" alt="Linear" width="100%"></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<h4 align="center">Low-Rank (Linformer)</h4>
+<p align="center"><img src="./images/low-rank-attention.svg" alt="Low-Rank" width="100%"></p>
+</td>
+<td width="50%">
+<h4 align="center">LSH (Reformer)</h4>
+<p align="center"><img src="./images/lsh-attention.svg" alt="LSH" width="100%"></p>
+</td>
+</tr>
+</table>
+
+<br>
+
+---
+
+<br>
+
+<h2 align="center">🔬 2025 SOTA</h2>
+
+<p align="center">
+  <i>Latest research: Linear attention that beats full attention!</i>
+</p>
+
+<br>
 
 <p align="center">
   <img src="./images/attention-evolution-2025.svg" alt="2025 SOTA" width="100%">
 </p>
 
-### Delta Rule & DeltaNet
+<br>
 
-> **Problem with linear attention**: Memory never forgets. **Solution**: Subtract old before adding new!
+<table>
+<tr>
+<td width="50%">
+<h4 align="center">Delta Rule</h4>
+<p align="center"><img src="./images/delta-rule-attention.svg" alt="Delta" width="100%"></p>
+<p align="center"><i>Subtract old before adding new</i></p>
+</td>
+<td width="50%">
+<h4 align="center">Gated Linear (GLA)</h4>
+<p align="center"><img src="./images/gated-linear-attention.svg" alt="GLA" width="100%"></p>
+<p align="center"><i>LSTM-style gates for attention</i></p>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<h4 align="center">MLA (DeepSeek)</h4>
+<p align="center"><img src="./images/mla-attention.svg" alt="MLA" width="100%"></p>
+<p align="center"><i>8× KV cache compression</i></p>
+</td>
+<td width="50%">
+<h4 align="center">Mamba (SSM)</h4>
+<p align="center"><img src="./images/state-space-models.svg" alt="Mamba" width="100%"></p>
+<p align="center"><i>O(n) time, O(1) state</i></p>
+</td>
+</tr>
+</table>
 
-<p align="center">
-  <img src="./images/delta-rule-attention.svg" alt="Delta Rule" width="100%">
-</p>
+<br>
 
-$$S_t = S_{t-1} + k_t \beta_t (v_t - S_{t-1}^T k_t)^T$$
-
-### Gated Linear Attention (GLA)
-
-> **Like LSTM for attention**: Add learnable forget gates to control memory retention.
-
-<p align="center">
-  <img src="./images/gated-linear-attention.svg" alt="GLA" width="100%">
-</p>
-
-$$S_t = G_t \odot S_{t-1} + k_t \otimes v_t$$
-
-### Multi-Head Latent Attention (MLA)
-
-> **DeepSeek innovation**: Compress KV to low-rank latent space. Cache the compressed representation.
-
-<p align="center">
-  <img src="./images/mla-attention.svg" alt="MLA" width="100%">
-</p>
-
-**Result**: 8× KV cache compression with minimal quality loss!
-
-### State Space Models (Mamba)
-
-> **No attention at all!** Replace with selective state space: h'(t) = Ah(t) + Bx(t)
-
-<p align="center">
-  <img src="./images/state-space-models.svg" alt="Mamba" width="100%">
-</p>
-
-$$h'(t) = Ah(t) + Bx(t)$$
-$$y(t) = Ch(t)$$
-
-**O(n) time, O(1) state per step!** But struggles with exact recall tasks.
-
-### Hybrid Architectures (Kimi Linear)
-
-> **Best of both worlds**: 75% linear attention (fast) + 25% full attention (quality).
+<h3 align="center">🏆 Hybrid: Kimi Linear</h3>
 
 <p align="center">
-  <img src="./images/hybrid-attention.svg" alt="Hybrid Attention" width="100%">
+  <img src="./images/hybrid-attention.svg" alt="Hybrid" width="100%">
 </p>
 
-From [Kimi Linear Paper (arXiv:2510.26692)](https://arxiv.org/pdf/2510.26692):
+<p align="center">
+  <a href="https://arxiv.org/abs/2510.26692">📄 Paper</a> |
+  <b>6.3× faster</b> at 1M context |
+  <b>75% less</b> KV cache |
+  <b>Better quality</b> than full attention
+</p>
 
-| Metric | Full MLA | Kimi Linear |
-|:-------|:---------|:------------|
-| MMLU-Pro | 49.2 | **51.0** (+1.8) |
-| RULER@128K | 81.1 | **84.3** (+3.2) |
-| Speed@1M | 1× | **6.3×** |
-| KV Cache | 100% | **25%** |
-
-> "For the first time, outperforms full attention under fair comparisons"
+<br>
 
 ---
 
-## 📊 Master Comparison Table
+<br>
+
+<h2 align="center">📊 Master Comparison</h2>
+
+<br>
 
 | Method | Time | Memory | Quality | Best For |
-|:-------|:-----|:-------|:--------|:---------|
+|:-------|:----:|:------:|:-------:|:---------|
 | Standard | O(n²d) | O(n²) | 100% | Short sequences |
-| Flash Attention | O(n²d) | **O(n)** | 100% | Training |
-| Sliding Window | O(nwd) | O(nw) | ~98% | Long docs |
+| **Flash Attention** | O(n²d) | **O(n)** | 100% | Training |
+| Sliding Window | O(nwd) | O(nw) | ~98% | Long documents |
 | Linear/Kernel | O(nd²) | O(nd) | ~95% | Very long |
-| Linformer | O(nkd) | O(nk) | ~96% | Fixed compression |
-| LSH (Reformer) | O(n log n) | O(n log n) | ~97% | Sparse |
 | GLA | O(nd²) | O(nd) | ~98% | Efficient |
-| DeltaNet | O(nd²) | O(nd) | ~99% | Quality |
 | Mamba | O(nd) | O(d) | ~97% | Speed |
 | **KDA (Kimi)** | O(nd²) | O(nd) | **101%+** | **Everything!** |
 
+<br>
+
 ---
 
-## 📖 Further Reading
+<br>
 
-### Papers
+<h2 align="center">📖 Further Reading</h2>
+
+<br>
+
+<table>
+<tr>
+<td width="50%">
+
+### 📄 Key Papers
 
 | Year | Paper | Innovation |
-|:-----|:------|:-----------|
-| 2017 | [Attention Is All You Need](https://arxiv.org/abs/1706.03762) | Original Transformer |
-| 2018 | [BERT](https://arxiv.org/abs/1810.04805) | Bidirectional pre-training |
-| 2020 | [GPT-3](https://arxiv.org/abs/2005.14165) | Scale is all you need |
-| 2022 | [Flash Attention](https://arxiv.org/abs/2205.14135) | IO-aware attention |
-| 2023 | [LLaMA](https://arxiv.org/abs/2302.13971) | Efficient open models |
-| 2023 | [Mamba](https://arxiv.org/abs/2312.00752) | Selective SSM |
-| 2024 | [GLA](https://arxiv.org/abs/2312.06635) | Gated linear attention |
-| 2025 | [Kimi Linear](https://arxiv.org/abs/2510.26692) | KDA + MLA hybrid |
+|:----:|:------|:-----------|
+| 2017 | [Attention Is All You Need](https://arxiv.org/abs/1706.03762) | Original |
+| 2018 | [BERT](https://arxiv.org/abs/1810.04805) | Bidirectional |
+| 2020 | [GPT-3](https://arxiv.org/abs/2005.14165) | Scale |
+| 2022 | [Flash Attention](https://arxiv.org/abs/2205.14135) | IO-aware |
+| 2023 | [LLaMA](https://arxiv.org/abs/2302.13971) | Efficient |
+| 2023 | [Mamba](https://arxiv.org/abs/2312.00752) | SSM |
+| 2025 | [Kimi Linear](https://arxiv.org/abs/2510.26692) | Hybrid |
 
-### Code Resources
+</td>
+<td width="50%">
 
-- 🔥 [Hugging Face Transformers](https://github.com/huggingface/transformers)
-- ⚡ [Flash Attention](https://github.com/Dao-AILab/flash-attention)
-- 🐍 [Mamba](https://github.com/state-spaces/mamba)
-- 🚀 [Kimi Linear](https://github.com/MoonshotAI/Kimi-Linear)
+### 💻 Code Resources
+
+| Resource | Link |
+|:---------|:-----|
+| 🤗 Transformers | [GitHub](https://github.com/huggingface/transformers) |
+| ⚡ Flash Attention | [GitHub](https://github.com/Dao-AILab/flash-attention) |
+| 🐍 Mamba | [GitHub](https://github.com/state-spaces/mamba) |
+| 🚀 Kimi Linear | [GitHub](https://github.com/MoonshotAI/Kimi-Linear) |
+
+</td>
+</tr>
+</table>
+
+<br>
 
 ---
 
+<br>
+
 <p align="center">
-
-### 🌟 Star this repo if you found it helpful!
-
-**Made with ❤️ for the ML community**
-
-<a href="#-quick-start"><img src="https://img.shields.io/badge/↑_Back_to_Top-333?style=for-the-badge" alt="Back to Top"></a>
-
+  <b>⭐ Star this repo if you found it helpful!</b>
 </p>
 
+<p align="center">
+  <i>Made with ❤️ for the ML community</i>
+</p>
+
+<p align="center">
+  <a href="#-learning-roadmap"><img src="https://img.shields.io/badge/↑_Back_to_Top-7C4DFF?style=for-the-badge" alt="Top"></a>
+</p>
+
+<br>
+
 ---
 
 <p align="center">
-  <sub>📝 Last updated: December 2025 | 📧 Contributions welcome!</sub>
+  <sub>📅 Last updated: December 2025 | 🤝 Contributions welcome!</sub>
 </p>
