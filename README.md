@@ -661,6 +661,7 @@ class MultiHeadAttention(nn.Module):
 | 2023 | [LLaMA](https://arxiv.org/abs/2302.13971) | Efficient |
 | 2023 | [Mamba](https://arxiv.org/abs/2312.00752) | SSM |
 | 2025 | [Kimi Linear](https://arxiv.org/abs/2510.26692) | Hybrid |
+| SURVEY ON APPLICATIONS OF TRANSFORMERS |[Paper](https://arxiv.org/pdf/2306.07303)|
 
 </td>
 <td width="50%">
@@ -673,7 +674,7 @@ class MultiHeadAttention(nn.Module):
 | ⚡ Flash Attention | [GitHub](https://github.com/Dao-AILab/flash-attention) |
 | 🐍 Mamba | [GitHub](https://github.com/state-spaces/mamba) |
 | 🚀 Kimi Linear | [GitHub](https://github.com/MoonshotAI/Kimi-Linear) |
-| SURVEY ON APPLICATIONS OF TRANSFORMERS | .[Paper](https://arxiv.org/pdf/2306.07303)|
+
 
 </td>
 </tr>
