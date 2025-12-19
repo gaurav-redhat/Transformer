@@ -673,6 +673,7 @@ class MultiHeadAttention(nn.Module):
 | ⚡ Flash Attention | [GitHub](https://github.com/Dao-AILab/flash-attention) |
 | 🐍 Mamba | [GitHub](https://github.com/state-spaces/mamba) |
 | 🚀 Kimi Linear | [GitHub](https://github.com/MoonshotAI/Kimi-Linear) |
+| SURVEY ON APPLICATIONS OF TRANSFORMERS | .[Paper](https://arxiv.org/pdf/2306.07303)|
 
 </td>
 </tr>
