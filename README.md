@@ -660,8 +660,10 @@ class MultiHeadAttention(nn.Module):
 | 2022 | [Flash Attention](https://arxiv.org/abs/2205.14135) | IO-aware |
 | 2023 | [LLaMA](https://arxiv.org/abs/2302.13971) | Efficient |
 | 2023 | [Mamba](https://arxiv.org/abs/2312.00752) | SSM |
+| 2023 | [SURVEY ON APPLICATIONS OF TRANSFORMERS](https://arxiv.org/pdf/2306.07303)|APPLICATIONS|
 | 2025 | [Kimi Linear](https://arxiv.org/abs/2510.26692) | Hybrid |
-| SURVEY ON APPLICATIONS OF TRANSFORMERS |[Paper](https://arxiv.org/pdf/2306.07303)|
+
+
 
 </td>
 <td width="50%">
