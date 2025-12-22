@@ -686,18 +686,4 @@ class MultiHeadAttention(nn.Module):
 
 ---
 
-<br>
 
-<p align="center">
-  <b>⭐ Star this repo if you found it helpful!</b>
-</p>
-
-<p align="center">
-  <i>Made with ❤️ for the ML community</i>
-</p>
-
-<p align="center">
-  <a href="#-learning-roadmap"><img src="https://img.shields.io/badge/↑_Back_to_Top-7C4DFF?style=for-the-badge" alt="Top"></a>
-</p>
-
-<br>
