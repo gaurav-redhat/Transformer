@@ -701,9 +701,3 @@ class MultiHeadAttention(nn.Module):
 </p>
 
 <br>
-
----
-
-<p align="center">
-  <sub>📅 Last updated: December 2025 | 🤝 Contributions welcome!</sub>
-</p>
